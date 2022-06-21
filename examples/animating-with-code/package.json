@@ -1,0 +1,13 @@
+{
+  "name": "@examples/animating-with-code",
+  "private": true,
+  "description": "Source code for the Animating with Code video",
+  "license": "MIT",
+  "scripts": {
+    "serve": "motion-canvas src/project.ts"
+  },
+  "dependencies": {
+    "@motion-canvas/core": "^3.0.3",
+    "@motion-canvas/ui": "^1.4.1"
+  }
+}

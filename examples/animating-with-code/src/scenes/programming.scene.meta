@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "loops",
+      "targetTime": 4.182892655586399
+    },
+    {
+      "name": "functions",
+      "targetTime": 6.839020235582957
+    },
+    {
+      "name": "external",
+      "targetTime": 9.795331939121812
+    },
+    {
+      "name": "end",
+      "targetTime": 13.863731262974259
+    },
+    {
+      "name": "next",
+      "targetTime": 15.18403252806314
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "examples",
+  "private": true,
+  "description": "A set of examples for Motion Canvas",
+  "license": "MIT",
+  "scripts": {
+    "animating-with-code": "npm run serve -w examples/animating-with-code",
+    "lint": "eslint \"examples/**/src/**/*.ts?(x)\"",
+    "lint:fix": "eslint --fix \"examples/**/src/**/*.ts?(x)\"",
+    "prettier": "prettier --check \"examples/**/src/**/*.ts?(x)\"",
+    "prettier:fix": "prettier --write \"examples/**/src/**/*.ts?(x)\""
+  },
+  "workspaces": [
+    "examples/*"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "prettier": "^2.7.1"
+  }
+}
