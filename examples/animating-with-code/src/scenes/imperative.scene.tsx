@@ -9,6 +9,7 @@ import {LayeredLayout} from '@motion-canvas/core/lib/components/LayeredLayout';
 import {Center, Origin} from '@motion-canvas/core/lib/types';
 import {Command, Timeline} from '../components';
 import {Group} from 'konva/lib/Group';
+import {Image} from 'konva/lib/shapes/Image';
 import {makeRef, useRef} from '@motion-canvas/core/lib/utils';
 import {colors, keyframes, resolveKeyframe} from '../misc/keyframes';
 import {
@@ -20,11 +21,7 @@ import {
 } from '@motion-canvas/core/lib/tweening';
 import {all} from '@motion-canvas/core/lib/flow';
 
-import {Image as ImageNode} from 'konva/lib/shapes/Image';
-import manim from '../images/manim.png';
-
-const image = new Image();
-image.src = manim.src;
+import manim from '../images/manim.png?img';
 
 export default function* imperative(scene: Scene): ThreadGenerator {
   yield* scene.transition(function* (next, previous) {
@@ -125,9 +122,9 @@ export default function* imperative(scene: Scene): ThreadGenerator {
         visible={false}
         background={'#171c28'}
       >
-        <ImageNode
+        <Image
           origin={Origin.Top}
-          image={image}
+          image={yield manim}
           width={1920}
           height={1080}
         />

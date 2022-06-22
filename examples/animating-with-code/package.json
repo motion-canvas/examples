@@ -7,7 +7,7 @@
     "serve": "motion-canvas src/project.ts"
   },
   "dependencies": {
-    "@motion-canvas/core": "^3.0.3",
-    "@motion-canvas/ui": "^1.4.1"
+    "@motion-canvas/core": "*",
+    "@motion-canvas/ui": "*"
   }
 }
