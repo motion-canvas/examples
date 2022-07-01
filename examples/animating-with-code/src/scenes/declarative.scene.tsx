@@ -1,4 +1,3 @@
-import type {Scene} from '@motion-canvas/core/lib/Scene';
 import {ThreadGenerator} from '@motion-canvas/core/lib/threading';
 import {waitUntil} from '@motion-canvas/core/lib/flow';
 import {Surface} from '@motion-canvas/core/lib/components';
@@ -13,8 +12,9 @@ import {all} from '@motion-canvas/core/lib/flow';
 import {colors, keyframes, resolveKeyframe} from '../misc/keyframes';
 import {showSurfaceVertically} from '@motion-canvas/core/lib/animations';
 import {Rect} from 'konva/lib/shapes/Rect';
+import {makeKonvaScene} from '@motion-canvas/core/lib/scenes';
 
-export default function* declarative(scene: Scene): ThreadGenerator {
+export default makeKonvaScene(function* declarative(scene) {
   yield* scene.transition();
 
   const circle = useRef<Circle>();
@@ -114,4 +114,4 @@ export default function* declarative(scene: Scene): ThreadGenerator {
 
   yield* waitUntil('next');
   scene.canFinish();
-}
+});

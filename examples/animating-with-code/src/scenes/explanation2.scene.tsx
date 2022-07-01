@@ -1,12 +1,11 @@
-import type {Scene} from '@motion-canvas/core/lib/Scene';
-import {ThreadGenerator} from '@motion-canvas/core/lib/threading';
 import {waitUntil} from '@motion-canvas/core/lib/flow';
 import {Code} from '@motion-canvas/core/lib/components/code';
 import {Origin} from '@motion-canvas/core/lib/types';
 import {Align} from '@motion-canvas/core/lib/components/Align';
 import {useRef} from '@motion-canvas/core/lib/utils';
+import {makeKonvaScene} from '@motion-canvas/core/lib/scenes';
 
-export default function* explanation2(scene: Scene): ThreadGenerator {
+export default makeKonvaScene(function* explanation2(scene) {
   yield* scene.transition();
 
   const code = useRef<Code>();
@@ -155,4 +154,4 @@ export default function* first(scene: Scene) {
 
   yield* waitUntil('next');
   scene.canFinish();
-}
+});

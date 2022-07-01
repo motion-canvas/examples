@@ -1,5 +1,3 @@
-import type {Scene} from '@motion-canvas/core/lib/Scene';
-import {ThreadGenerator} from '@motion-canvas/core/lib/threading';
 import {waitFor, waitUntil} from '@motion-canvas/core/lib/flow';
 import {slideTransition} from '@motion-canvas/core/lib/transitions';
 import {Align} from '@motion-canvas/core/lib/components/Align';
@@ -23,6 +21,7 @@ import {LayoutText} from '@motion-canvas/core/lib/components/LayoutText';
 import {Icon} from '@motion-canvas/core/lib/components/Icon';
 
 import members from '../misc/members.json';
+import {makeKonvaScene} from '@motion-canvas/core/lib/scenes';
 
 const colors = {
   10: '#FF424D',
@@ -76,7 +75,7 @@ function Tile(config: {
   );
 }
 
-export default function* programming(scene: Scene): ThreadGenerator {
+export default makeKonvaScene(function* programming(scene) {
   const loops = useRef<typeof Tile>();
   const functions = useRef<typeof Tile>();
   const external = useRef<typeof Tile>();
@@ -255,4 +254,4 @@ for (const name of names) {
 
   yield* waitUntil('next');
   scene.canFinish();
-}
+});

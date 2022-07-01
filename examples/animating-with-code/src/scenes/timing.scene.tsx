@@ -1,5 +1,3 @@
-import type {Scene} from '@motion-canvas/core/lib/Scene';
-import {ThreadGenerator} from '@motion-canvas/core/lib/threading';
 import {waitUntil} from '@motion-canvas/core/lib/flow';
 import {slideTransition} from '@motion-canvas/core/lib/transitions';
 import {LinearLayout, Surface} from '@motion-canvas/core/lib/components';
@@ -13,8 +11,9 @@ import {LayoutText} from '@motion-canvas/core/lib/components/LayoutText';
 import {all} from '@motion-canvas/core/lib/flow';
 import {easeInOutCubic, rectArcTween} from '@motion-canvas/core/lib/tweening';
 import {Rect} from 'konva/lib/shapes/Rect';
+import {makeKonvaScene} from '@motion-canvas/core/lib/scenes';
 
-export default function* timing(scene: Scene): ThreadGenerator {
+export default makeKonvaScene(function* timing(scene) {
   const timeline = useRef<Timeline>();
   const keys: Record<number, Rect> = {};
   const declarative = useRef<Surface>();
@@ -142,4 +141,4 @@ export default function* timing(scene: Scene): ThreadGenerator {
 
   yield* waitUntil('next');
   scene.canFinish();
-}
+});

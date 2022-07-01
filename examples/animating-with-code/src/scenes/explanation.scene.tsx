@@ -1,13 +1,12 @@
-import type {Scene} from '@motion-canvas/core/lib/Scene';
-import {ThreadGenerator} from '@motion-canvas/core/lib/threading';
 import {waitUntil} from '@motion-canvas/core/lib/flow';
 import {Code} from '@motion-canvas/core/lib/components/code';
 import {Origin} from '@motion-canvas/core/lib/types';
 import {useRef} from '@motion-canvas/core/lib/utils';
 import {ANIMATE} from '@motion-canvas/core/lib/symbols';
 import {all, delay} from '@motion-canvas/core/lib/flow';
+import {makeKonvaScene} from '@motion-canvas/core/lib/scenes';
 
-export default function* explanation(scene: Scene): ThreadGenerator {
+export default makeKonvaScene(function* explanation(scene) {
   yield* scene.transition();
 
   const code = useRef<Code>();
@@ -300,4 +299,4 @@ function *animate(picker: Reference<ColorPicker>) {
 
   yield* waitUntil('next');
   scene.canFinish();
-}
+});

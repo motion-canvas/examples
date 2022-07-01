@@ -10,8 +10,6 @@ import programming from './scenes/programming.scene';
 import explanation from './scenes/explanation.scene';
 import explanation2 from './scenes/explanation2.scene';
 
-import audio from './sound/voice.wav';
-
 bootstrap({
   name: 'animating-with-code',
   scenes: [
@@ -22,6 +20,5 @@ bootstrap({
     explanation,
     explanation2,
   ],
-  audio,
   audioOffset: -52,
 });

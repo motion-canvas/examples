@@ -1,5 +1,3 @@
-import type {Scene} from '@motion-canvas/core/lib/Scene';
-import {ThreadGenerator} from '@motion-canvas/core/lib/threading';
 import {surfaceTransition} from '@motion-canvas/core/lib/animations';
 import {waitUntil} from '@motion-canvas/core/lib/flow';
 import {Align} from '@motion-canvas/core/lib/components/Align';
@@ -22,10 +20,11 @@ import {
 import {all} from '@motion-canvas/core/lib/flow';
 
 import manim from '../images/manim.png?img';
+import {makeKonvaScene} from '@motion-canvas/core/lib/scenes';
 
-export default function* imperative(scene: Scene): ThreadGenerator {
+export default makeKonvaScene(function* imperative(scene) {
   yield* scene.transition(function* (next, previous) {
-    previous?.hide();
+    previous?.visible(false);
   });
 
   const circle = useRef<Circle>();
@@ -178,4 +177,4 @@ export default function* imperative(scene: Scene): ThreadGenerator {
   yield* surfaceTransition(code.value, manimImg.value);
   yield* waitUntil('next');
   scene.canFinish();
-}
+});
