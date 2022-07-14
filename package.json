@@ -20,7 +20,7 @@
     "prettier": "^2.7.1"
   },
   "dependencies": {
-    "@motion-canvas/core": "^6.0.1",
+    "@motion-canvas/core": "^7.0.0",
     "@motion-canvas/ui": "^1.6.0"
   }
 }

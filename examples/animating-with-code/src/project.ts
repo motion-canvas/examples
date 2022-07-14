@@ -1,3 +1,4 @@
+import '@motion-canvas/core/lib/patches';
 import {bootstrap} from '@motion-canvas/core/lib/bootstrap';
 
 import 'prismjs/components/prism-jsx';

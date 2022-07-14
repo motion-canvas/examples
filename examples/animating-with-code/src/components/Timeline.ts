@@ -1,7 +1,8 @@
 import {Shape, ShapeConfig} from 'konva/lib/Shape';
 import type {Context} from 'konva/lib/Context';
 import type {GetSet} from 'konva/lib/types';
-import {getset, KonvaNode} from '@motion-canvas/core/lib/decorators';
+import {KonvaNode} from '@motion-canvas/core/lib/decorators';
+import {getset} from '@motion-canvas/core/lib/decorators/getset';
 import {CanvasHelper} from '@motion-canvas/core/lib/helpers';
 
 interface TimelineConfig extends ShapeConfig {

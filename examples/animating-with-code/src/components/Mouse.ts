@@ -1,5 +1,6 @@
 import {Shape, ShapeConfig} from 'konva/lib/Shape';
-import {getset, KonvaNode} from '@motion-canvas/core/lib/decorators';
+import {KonvaNode} from '@motion-canvas/core/lib/decorators';
+import {getset} from '@motion-canvas/core/lib/decorators/getset';
 import {Context} from 'konva/lib/Context';
 import {GetSet, Vector2d} from 'konva/lib/types';
 
