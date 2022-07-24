@@ -64,7 +64,7 @@ export default makeKonvaScene(function* timing(scene) {
   );
 
   const selected = Object.values(keys).slice(1);
-  yield* scene.transition(slideTransition());
+  yield* slideTransition();
 
   yield* waitUntil('declarative');
   imperative.value.cache();

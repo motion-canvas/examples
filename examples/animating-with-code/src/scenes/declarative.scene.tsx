@@ -15,8 +15,6 @@ import {Rect} from 'konva/lib/shapes/Rect';
 import {makeKonvaScene} from '@motion-canvas/core/lib/scenes';
 
 export default makeKonvaScene(function* declarative(scene) {
-  yield* scene.transition();
-
   const circle = useRef<Circle>();
   const shadows: Record<number, Circle> = {};
   const keys: Record<number, Rect> = {};

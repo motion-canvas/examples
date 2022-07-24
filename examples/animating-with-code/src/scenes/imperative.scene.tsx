@@ -1,6 +1,5 @@
 import {surfaceTransition} from '@motion-canvas/core/lib/animations';
 import {waitUntil} from '@motion-canvas/core/lib/flow';
-import {Align} from '@motion-canvas/core/lib/components/Align';
 import {Circle} from 'konva/lib/shapes/Circle';
 import {Arrow, LinearLayout, Surface} from '@motion-canvas/core/lib/components';
 import {LayeredLayout} from '@motion-canvas/core/lib/components/LayeredLayout';
@@ -21,11 +20,17 @@ import {all} from '@motion-canvas/core/lib/flow';
 
 import manim from '../images/manim.png?img';
 import {makeKonvaScene} from '@motion-canvas/core/lib/scenes';
+import {useTransition} from '@motion-canvas/core/lib/transitions';
 
 export default makeKonvaScene(function* imperative(scene) {
-  yield* scene.transition(function* (next, previous) {
-    previous?.visible(false);
-  });
+  useTransition(
+    () => {
+      // do nothing
+    },
+    previous => {
+      previous.globalAlpha = 0;
+    },
+  );
 
   const circle = useRef<Circle>();
   const arrows: Record<number, Arrow> = {};
@@ -73,62 +78,60 @@ export default makeKonvaScene(function* imperative(scene) {
       <OffsetArrow value={30} />
     </Group>,
     <OffsetArrow value={60} />,
-    <Align>
-      <Surface ref={surface} background={'#242424'} y={360}>
-        <LayeredLayout origin={Origin.Top}>
-          <Timeline ref={timeline} width={1280} height={120} />
-          <LinearLayout
-            ref={commands}
-            origin={Origin.TopLeft}
-            direction={Center.Horizontal}
-            x={-600}
-            y={-5}
-            clipWidth={1}
-            clipHeight={120}
-            clipX={-480}
-            clipY={-20}
-          >
-            <Command value={10} />
-            <Command value={30} />
-            <Command value={60} />
-            <Command value={80} />
-          </LinearLayout>
-        </LayeredLayout>
-      </Surface>
-      <Surface visible={false} ref={code} background={'#242424'} x={-270}>
-        <LinearLayout origin={Origin.TopLeft} direction={Center.Horizontal}>
-          <LinearLayout origin={Origin.Left} padd={40} margin={[0, 300, 0, 0]}>
-            <Command value={0} />
-            <Command value={0} />
-            <Command value={0} />
-            <Command value={0} />
-            <Command value={0} />
-            <Command value={10} />
-            <Command value={30} />
-            <Command value={60} />
-            <Command value={80} />
-            <Command value={0} />
-            <Command value={0} />
-            <Command value={0} />
-            <Command value={0} />
-            <Command value={0} />
-          </LinearLayout>
+    <Surface ref={surface} background={'#242424'} y={360}>
+      <LayeredLayout origin={Origin.Top}>
+        <Timeline ref={timeline} width={1280} height={120} />
+        <LinearLayout
+          ref={commands}
+          origin={Origin.TopLeft}
+          direction={Center.Horizontal}
+          x={-600}
+          y={-5}
+          clipWidth={1}
+          clipHeight={120}
+          clipX={-480}
+          clipY={-20}
+        >
+          <Command value={10} />
+          <Command value={30} />
+          <Command value={60} />
+          <Command value={80} />
         </LinearLayout>
-      </Surface>
-      <Surface
-        ref={manimImg}
-        rescaleChild={false}
-        visible={false}
-        background={'#171c28'}
-      >
-        <Image
-          origin={Origin.Top}
-          image={yield manim}
-          width={1920}
-          height={1080}
-        />
-      </Surface>
-    </Align>,
+      </LayeredLayout>
+    </Surface>,
+    <Surface visible={false} ref={code} background={'#242424'} x={-270}>
+      <LinearLayout origin={Origin.TopLeft} direction={Center.Horizontal}>
+        <LinearLayout origin={Origin.Left} padd={40} margin={[0, 300, 0, 0]}>
+          <Command value={0} />
+          <Command value={0} />
+          <Command value={0} />
+          <Command value={0} />
+          <Command value={0} />
+          <Command value={10} />
+          <Command value={30} />
+          <Command value={60} />
+          <Command value={80} />
+          <Command value={0} />
+          <Command value={0} />
+          <Command value={0} />
+          <Command value={0} />
+          <Command value={0} />
+        </LinearLayout>
+      </LinearLayout>
+    </Surface>,
+    <Surface
+      ref={manimImg}
+      rescaleChild={false}
+      visible={false}
+      background={'#171c28'}
+    >
+      <Image
+        origin={Origin.Top}
+        image={yield manim}
+        width={1920}
+        height={1080}
+      />
+    </Surface>,
   );
 
   function setTime(value: number) {

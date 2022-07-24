@@ -6,8 +6,6 @@ import {useRef} from '@motion-canvas/core/lib/utils';
 import {makeKonvaScene} from '@motion-canvas/core/lib/scenes';
 
 export default makeKonvaScene(function* explanation2(scene) {
-  yield* scene.transition();
-
   const code = useRef<Code>();
 
   scene.add(

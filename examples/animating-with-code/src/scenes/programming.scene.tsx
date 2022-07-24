@@ -1,6 +1,5 @@
 import {waitFor, waitUntil} from '@motion-canvas/core/lib/flow';
 import {slideTransition} from '@motion-canvas/core/lib/transitions';
-import {Align} from '@motion-canvas/core/lib/components/Align';
 import {LinearLayout, Surface} from '@motion-canvas/core/lib/components';
 
 import {Rect} from 'konva/lib/shapes/Rect';
@@ -85,116 +84,114 @@ export default makeKonvaScene(function* programming(scene) {
   const pixel = useRef<Rect>();
 
   scene.add(
-    <Align>
-      <Tile
-        offset={-600}
-        code={`
+    <Tile
+      offset={-600}
+      code={`
 for (let i = 0; i < 64; i++) {
-  const x = i % 8;
-  const y = Math.floor(i / 8);
-  pixel.position(x * 48, y * 48);
-  waitFor(0.2);
+const x = i % 8;
+const y = Math.floor(i / 8);
+pixel.position(x * 48, y * 48);
+waitFor(0.2);
 }
-      `}
-        ref={loops}
-      >
-        <Surface background={'#fff'}>
-          <LayeredLayout>
-            <Grid
-              width={384}
-              height={384}
-              fill={'rgba(0, 0, 0, 0.16)'}
-              gridSize={48}
-              checker
-            />
-            <Rect ref={pixel} width={48} height={48} fill={colors[80]} />
-          </LayeredLayout>
-        </Surface>
-      </Tile>
-      <Tile
-        offset={0}
-        code={`
+    `}
+      ref={loops}
+    >
+      <Surface background={'#fff'}>
+        <LayeredLayout>
+          <Grid
+            width={384}
+            height={384}
+            fill={'rgba(0, 0, 0, 0.16)'}
+            gridSize={48}
+            checker
+          />
+          <Rect ref={pixel} width={48} height={48} fill={colors[80]} />
+        </LayeredLayout>
+      </Surface>
+    </Tile>,
+    <Tile
+      offset={0}
+      code={`
 function ripple(node) {
-  // do ripple
+// do ripple
 }
 
 ripple(icon);
 ripple(square);
 ripple(object);
-      `}
-        ref={functions}
+    `}
+      ref={functions}
+    >
+      <Surface ref={makeRef(ripples, 'a')} background={colors[60]} y={200}>
+        <LayoutText
+          text={'OBJECT'}
+          padd={[30, 80]}
+          fill={'white'}
+          fontVariant={'700'}
+        />
+      </Surface>
+      <Surface
+        ref={makeRef(ripples, 'b')}
+        background={colors[60]}
+        x={50}
+        y={-10}
       >
-        <Surface ref={makeRef(ripples, 'a')} background={colors[60]} y={200}>
-          <LayoutText
-            text={'OBJECT'}
-            padd={[30, 80]}
-            fill={'white'}
-            fontVariant={'700'}
-          />
-        </Surface>
-        <Surface
-          ref={makeRef(ripples, 'b')}
-          background={colors[60]}
-          x={50}
-          y={-10}
-        >
+        <Rect width={100} height={100} />
+      </Surface>
+      <Surface
+        ref={makeRef(ripples, 'c')}
+        background={colors[60]}
+        radius={50}
+        x={-50}
+        y={-200}
+      >
+        <LayeredLayout>
           <Rect width={100} height={100} />
-        </Surface>
-        <Surface
-          ref={makeRef(ripples, 'c')}
-          background={colors[60]}
-          radius={50}
-          x={-50}
-          y={-200}
-        >
-          <LayeredLayout>
-            <Rect width={100} height={100} />
-            <Group>
-              <Icon
-                fill={'white'}
-                y={5}
-                x={2}
-                width={24}
-                height={24}
-                scaleX={3}
-                scaleY={3}
-              />
-            </Group>
-          </LayeredLayout>
-        </Surface>
-      </Tile>
-      <Tile
-        offset={600}
-        code={`
+          <Group>
+            <Icon
+              fill={'white'}
+              y={5}
+              x={2}
+              width={24}
+              height={24}
+              scaleX={3}
+              scaleY={3}
+            />
+          </Group>
+        </LayeredLayout>
+      </Surface>
+    </Tile>,
+    <Tile
+      offset={600}
+      code={`
 import names from './data.csv';
 
 for (const name of names) {
-  list.addLine(name);
+list.addLine(name);
 }
-      `}
-        ref={external}
-      >
-        <LinearLayout>
-          <Surface background={colors[10]} margin={[0, 0, 20]}>
-            <LayoutText
-              text={'TOP SUPPORTERS'}
-              fill={'white'}
-              fontVariant={'700'}
-              padd={[30, 80]}
-            />
-          </Surface>
-          {members.slice(0, 5).map((member, index) => (
-            <LayoutText
-              ref={makeRef(names, index)}
-              origin={Origin.Left}
-              text={member}
-              padd={[20, 20]}
-              fill={'white'}
-            />
-          ))}
-        </LinearLayout>
-      </Tile>
-    </Align>,
+    `}
+      ref={external}
+    >
+      <LinearLayout>
+        <Surface background={colors[10]} margin={[0, 0, 20]}>
+          <LayoutText
+            text={'TOP SUPPORTERS'}
+            fill={'white'}
+            fontVariant={'700'}
+            padd={[30, 80]}
+          />
+        </Surface>
+        {members.slice(0, 5).map((member, index) => (
+          <LayoutText
+            ref={makeRef(names, index)}
+            origin={Origin.Left}
+            text={member}
+            padd={[20, 20]}
+            fill={'white'}
+          />
+        ))}
+      </LinearLayout>
+    </Tile>,
   );
   loops.show(0);
   functions.show(0);
@@ -221,7 +218,7 @@ for (const name of names) {
     yield* waitFor(0.4);
   });
 
-  yield* scene.transition(slideTransition());
+  yield* slideTransition();
 
   yield* waitUntil('loops');
   functions.group.moveToTop();

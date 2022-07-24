@@ -7,8 +7,6 @@ import {all, delay} from '@motion-canvas/core/lib/flow';
 import {makeKonvaScene} from '@motion-canvas/core/lib/scenes';
 
 export default makeKonvaScene(function* explanation(scene) {
-  yield* scene.transition();
-
   const code = useRef<Code>();
 
   scene.add(
