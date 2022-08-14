@@ -4,10 +4,14 @@
   "description": "Source code for the Animating with Code video",
   "license": "MIT",
   "scripts": {
-    "serve": "motion-canvas src/project.ts"
+    "serve": "vite"
   },
   "dependencies": {
-    "@motion-canvas/core": "*",
-    "@motion-canvas/ui": "*"
+    "@motion-canvas/core": "*"
+  },
+  "devDependencies": {
+    "@motion-canvas/ui": "*",
+    "@motion-canvas/vite-plugin": "*",
+    "vite": "^3.0.0"
   }
 }

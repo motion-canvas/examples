@@ -1,6 +1,6 @@
-import '@motion-canvas/core/lib/patches';
-import {bootstrap} from '@motion-canvas/core/lib/bootstrap';
+import {Project} from '@motion-canvas/core/lib';
 
+import 'prismjs';
 import 'prismjs/components/prism-jsx';
 import 'prismjs/components/prism-tsx';
 
@@ -11,8 +11,9 @@ import programming from './scenes/programming.scene';
 import explanation from './scenes/explanation.scene';
 import explanation2 from './scenes/explanation2.scene';
 
-bootstrap({
+export default new Project({
   name: 'animating-with-code',
+  background: '#141414',
   scenes: [
     declarative,
     imperative,
@@ -21,5 +22,4 @@ bootstrap({
     explanation,
     explanation2,
   ],
-  audioOffset: -52,
 });

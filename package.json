@@ -14,13 +14,15 @@
     "examples/*"
   ],
   "devDependencies": {
+    "@motion-canvas/ui": "^10.0.0",
+    "@motion-canvas/vite-plugin": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "eslint": "^8.18.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "vite": "^3.0.0"
   },
   "dependencies": {
-    "@motion-canvas/core": "^9.1.1",
-    "@motion-canvas/ui": "^9.1.1"
+    "@motion-canvas/core": "^10.0.0"
   }
 }
