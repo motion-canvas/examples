@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "tint",
+      "targetTime": 4.810785326089198
+    },
+    {
+      "name": "color",
+      "targetTime": 8.535917550648605
+    },
+    {
+      "name": "add_to_buffer",
+      "targetTime": 10.68179054504155
+    },
+    {
+      "name": "light_b",
+      "targetTime": 13.634232853963544
+    },
+    {
+      "name": "repeat",
+      "targetTime": 14.120610124954956
+    },
+    {
+      "name": "one_more",
+      "targetTime": 19.870908044984805
+    },
+    {
+      "name": "show_param",
+      "targetTime": 21.348851973152712
+    },
+    {
+      "name": "adjust_param",
+      "targetTime": 23.59435930131979
+    },
+    {
+      "name": "add_math",
+      "targetTime": 26.268236861195923
+    },
+    {
+      "name": "adjust_param_again",
+      "targetTime": 30.49491807199834
+    },
+    {
+      "name": "adjust_param_again_2",
+      "targetTime": 35.873221618416125
+    },
+    {
+      "name": "zoom_in",
+      "targetTime": 40.21673417955648
+    },
+    {
+      "name": "global_light",
+      "targetTime": 45.82540393652969
+    },
+    {
+      "name": "global_light_mul",
+      "targetTime": 47.400300529093045
+    },
+    {
+      "name": "global_light_intensity",
+      "targetTime": 47.97770310548543
+    },
+    {
+      "name": "next",
+      "targetTime": 52.932453421214916
+    }
+  ],
+  "seed": 3966280610
+}

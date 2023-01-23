@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "vertex",
+      "targetTime": 1.7720949331544302
+    },
+    {
+      "name": "start_with_mesh",
+      "targetTime": 12.092321038194935
+    },
+    {
+      "name": "double_vertices",
+      "targetTime": 14.883134525675683
+    },
+    {
+      "name": "show_normals",
+      "targetTime": 18.863131244128517
+    },
+    {
+      "name": "collapse",
+      "targetTime": 22.091348897979405
+    },
+    {
+      "name": "show_light_dir",
+      "targetTime": 25.101874420359085
+    },
+    {
+      "name": "show_dots",
+      "targetTime": 26.857096063547218
+    },
+    {
+      "name": "show_correct_normals",
+      "targetTime": 31.416838352968142
+    },
+    {
+      "name": "offsetting_them",
+      "targetTime": 34.64440020243423
+    },
+    {
+      "name": "shadow",
+      "targetTime": 36.30585176566055
+    },
+    {
+      "name": "hide_mesh",
+      "targetTime": 36.93333333333333
+    },
+    {
+      "name": "showcase",
+      "targetTime": 37.233333333333334
+    },
+    {
+      "name": "next",
+      "targetTime": 39.615238039443675
+    }
+  ],
+  "seed": 472494172
+}

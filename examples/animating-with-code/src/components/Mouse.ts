@@ -11,7 +11,7 @@ export interface MouseConfig extends ShapeConfig {
 @KonvaNode()
 export class Mouse extends Shape {
   @getset(1)
-  public press: GetSet<MouseConfig['press'], this>;
+  public declare press: GetSet<MouseConfig['press'], this>;
 
   private isSelecting = false;
   private selectionStart: Vector2d;

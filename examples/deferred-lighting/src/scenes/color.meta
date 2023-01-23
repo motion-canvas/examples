@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "buffer_show",
+      "targetTime": 6.057025326470848
+    },
+    {
+      "name": "first_texture",
+      "targetTime": 9.88420428246581
+    },
+    {
+      "name": "texture_show",
+      "targetTime": 12.65095285535503
+    },
+    {
+      "name": "color_sample",
+      "targetTime": 14.451073611086882
+    },
+    {
+      "name": "notice_that",
+      "targetTime": 18.595609596742563
+    },
+    {
+      "name": "alpha",
+      "targetTime": 21.57338296178943
+    },
+    {
+      "name": "discard",
+      "targetTime": 24.770015121016847
+    },
+    {
+      "name": "palette",
+      "targetTime": 28.664041332464567
+    },
+    {
+      "name": "resolve_lookup",
+      "targetTime": 31.0110870815009
+    },
+    {
+      "name": "at_this_step",
+      "targetTime": 33.710341041983185
+    },
+    {
+      "name": "second_texture",
+      "targetTime": 35.60675292818998
+    },
+    {
+      "name": "no_lights",
+      "targetTime": 37.02318253780858
+    },
+    {
+      "name": "next",
+      "targetTime": 39.49453419005672
+    }
+  ],
+  "seed": 996460613
+}

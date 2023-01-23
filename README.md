@@ -15,7 +15,7 @@ Make sure that you have [Git LFS][git-lfs] installed and that you cloned the pro
    ```
 4. Run one of the available examples, for instance:
    ```shell
-   npm run animating-with-code 
+   npm run deferred-lighting 
    ```
    Take a look at [`package.json`](./package.json) for the list of available examples.
 

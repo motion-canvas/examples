@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "animating-with-code": "npm run serve -w examples/animating-with-code",
+    "deferred-lighting": "npm run serve -w examples/deferred-lighting",
     "lint": "eslint \"examples/**/src/**/*.ts?(x)\"",
     "lint:fix": "eslint --fix \"examples/**/src/**/*.ts?(x)\"",
     "prettier": "prettier --check \"examples/**/src/**/*.ts?(x)\"",
@@ -14,15 +15,10 @@
     "examples/*"
   ],
   "devDependencies": {
-    "@motion-canvas/ui": "^11.1.0",
-    "@motion-canvas/vite-plugin": "^11.1.0",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "eslint": "^8.18.0",
     "prettier": "^2.7.1",
     "vite": "^3.0.0"
-  },
-  "dependencies": {
-    "@motion-canvas/core": "^11.1.0"
   }
 }

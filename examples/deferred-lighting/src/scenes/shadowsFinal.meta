@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "first_bit_highlight",
+      "targetTime": 1.1276486830156414
+    },
+    {
+      "name": "first_bit_highlight_2",
+      "targetTime": 2.3635365034940023
+    },
+    {
+      "name": "first_bit",
+      "targetTime": 3.905505842021678
+    },
+    {
+      "name": "first_bit_render",
+      "targetTime": 4.801067829294976
+    },
+    {
+      "name": "show_circle",
+      "targetTime": 6.496033689893703
+    },
+    {
+      "name": "move_1",
+      "targetTime": 8.2315125586731
+    },
+    {
+      "name": "move_0",
+      "targetTime": 10.199064884824043
+    },
+    {
+      "name": "orignal_sprite",
+      "targetTime": 11.839741319023739
+    },
+    {
+      "name": "decrementing",
+      "targetTime": 13.904015858945867
+    },
+    {
+      "name": "show_circle_2",
+      "targetTime": 15.659449689313528
+    },
+    {
+      "name": "go_1_b",
+      "targetTime": 19.297100651546483
+    },
+    {
+      "name": "render_light",
+      "targetTime": 23.05960711116067
+    },
+    {
+      "name": "notice_that",
+      "targetTime": 26.028207180890124
+    },
+    {
+      "name": "next",
+      "targetTime": 29.333333333333332
+    }
+  ],
+  "seed": 1631919772
+}

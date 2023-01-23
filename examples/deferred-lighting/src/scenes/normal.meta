@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "texture_show",
+      "targetTime": 4.0924314942666316
+    },
+    {
+      "name": "next",
+      "targetTime": 9.635705453669546
+    }
+  ],
+  "seed": 3917542486
+}

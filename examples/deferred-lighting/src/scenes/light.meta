@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "point_light",
+      "targetTime": 1.2733144969539185
+    },
+    {
+      "name": "mesh",
+      "targetTime": 2.75822782856626
+    },
+    {
+      "name": "hide_light",
+      "targetTime": 6.824414370966466
+    },
+    {
+      "name": "move_square",
+      "targetTime": 14.372845381206027
+    },
+    {
+      "name": "intensity",
+      "targetTime": 19.833018420142082
+    },
+    {
+      "name": "radial",
+      "targetTime": 25.075434273901095
+    },
+    {
+      "name": "the_further",
+      "targetTime": 27.544203355259878
+    },
+    {
+      "name": "limit_angle",
+      "targetTime": 30.993547720490284
+    },
+    {
+      "name": "origin",
+      "targetTime": 36.45020280730982
+    },
+    {
+      "name": "fragment_position",
+      "targetTime": 39.25687087355302
+    },
+    {
+      "name": "distance",
+      "targetTime": 42.03882928608653
+    },
+    {
+      "name": "angle",
+      "targetTime": 42.83940335286748
+    },
+    {
+      "name": "show_code",
+      "targetTime": 45.06642826772261
+    },
+    {
+      "name": "move",
+      "targetTime": 46.233333333333334
+    },
+    {
+      "name": "zoom_in",
+      "targetTime": 49.444620851495515
+    },
+    {
+      "name": "normal_intensity",
+      "targetTime": 53.524054363895935
+    },
+    {
+      "name": "show_normal",
+      "targetTime": 56.65612244980544
+    },
+    {
+      "name": "show_light_pos",
+      "targetTime": 61.38871227431275
+    },
+    {
+      "name": "show_light_dir",
+      "targetTime": 63.52851641424377
+    },
+    {
+      "name": "normalize",
+      "targetTime": 65.311087034465
+    },
+    {
+      "name": "dot_product",
+      "targetTime": 67.725227644077
+    },
+    {
+      "name": "projection",
+      "targetTime": 73.90526854384363
+    },
+    {
+      "name": "perpendicular",
+      "targetTime": 78.94465266281541
+    },
+    {
+      "name": "negative",
+      "targetTime": 83.29590297920909
+    },
+    {
+      "name": "factor",
+      "targetTime": 88.94468198707801
+    },
+    {
+      "name": "hide_vectors",
+      "targetTime": 92.3463753162598
+    },
+    {
+      "name": "component_x",
+      "targetTime": 93.9146553500009
+    },
+    {
+      "name": "component_y",
+      "targetTime": 94.35049808804955
+    },
+    {
+      "name": "blue",
+      "targetTime": 96.78317895978854
+    },
+    {
+      "name": "hide_normals",
+      "targetTime": 100.6759810752634
+    },
+    {
+      "name": "normals_zero",
+      "targetTime": 105.12924493526411
+    },
+    {
+      "name": "normals_one",
+      "targetTime": 107.68643109193891
+    },
+    {
+      "name": "zoom_out",
+      "targetTime": 110.86686804303046
+    }
+  ],
+  "seed": 3495777705
+}

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "shadows",
+      "targetTime": 1.372066537120034
+    },
+    {
+      "name": "move_light",
+      "targetTime": 1.9941241906601885
+    },
+    {
+      "name": "zoom_out",
+      "targetTime": 6.949324357266484
+    },
+    {
+      "name": "buffer",
+      "targetTime": 10.1819911578878
+    },
+    {
+      "name": "stencil_show",
+      "targetTime": 15.489382053424823
+    },
+    {
+      "name": "stencil_shadow",
+      "targetTime": 16.79033699970844
+    },
+    {
+      "name": "render_light",
+      "targetTime": 18.74846423082866
+    },
+    {
+      "name": "next",
+      "targetTime": 23.490020586452424
+    }
+  ],
+  "seed": 3729505732
+}

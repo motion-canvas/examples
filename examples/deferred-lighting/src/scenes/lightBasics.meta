@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "move",
+      "targetTime": 5.076396038578717
+    },
+    {
+      "name": "multiply",
+      "targetTime": 6.874455972367855
+    },
+    {
+      "name": "save_to_buffer",
+      "targetTime": 8.189982554291078
+    },
+    {
+      "name": "additive",
+      "targetTime": 22.01078724896668
+    },
+    {
+      "name": "instead",
+      "targetTime": 26.04908352063357
+    },
+    {
+      "name": "distribute",
+      "targetTime": 27.800437098217202
+    },
+    {
+      "name": "multiply_each",
+      "targetTime": 29.27836682691005
+    },
+    {
+      "name": "add_all",
+      "targetTime": 31.114656380750972
+    },
+    {
+      "name": "next",
+      "targetTime": 33.93971293646763
+    }
+  ],
+  "seed": 3977752058
+}

@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "show_circle",
+      "targetTime": 4.534648214153331
+    },
+    {
+      "name": "show_lights",
+      "targetTime": 5.6659867134784925
+    },
+    {
+      "name": "show_normals",
+      "targetTime": 8.696703131044579
+    },
+    {
+      "name": "blend_normals",
+      "targetTime": 9.358037272611972
+    },
+    {
+      "name": "hide_normals",
+      "targetTime": 12.553656527306975
+    },
+    {
+      "name": "inherit",
+      "targetTime": 15.289323417599086
+    },
+    {
+      "name": "sometimes",
+      "targetTime": 18.482747423490824
+    },
+    {
+      "name": "decals",
+      "targetTime": 19.535402116727685
+    },
+    {
+      "name": "next",
+      "targetTime": 21.30494099465861
+    }
+  ],
+  "seed": 1765640822
+}

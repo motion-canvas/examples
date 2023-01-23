@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "upscale",
+      "targetTime": 3.1137543455806567
+    },
+    {
+      "name": "composite",
+      "targetTime": 4.236851783679503
+    },
+    {
+      "name": "but",
+      "targetTime": 9.782104157820354
+    },
+    {
+      "name": "single_layer",
+      "targetTime": 12.416649373565697
+    },
+    {
+      "name": "next",
+      "targetTime": 15.074086352148488
+    }
+  ],
+  "seed": 2186329980
+}

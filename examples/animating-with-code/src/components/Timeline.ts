@@ -14,11 +14,11 @@ interface TimelineConfig extends ShapeConfig {
 @KonvaNode({centroid: false})
 export class Timeline extends Shape {
   @getset(100)
-  public frames: GetSet<TimelineConfig['frames'], this>;
+  public declare frames: GetSet<TimelineConfig['frames'], this>;
   @getset(10)
-  public density: GetSet<TimelineConfig['density'], this>;
+  public declare density: GetSet<TimelineConfig['density'], this>;
   @getset(0)
-  public playhead: GetSet<TimelineConfig['playhead'], this>;
+  public declare playhead: GetSet<TimelineConfig['playhead'], this>;
 
   public constructor(config: ShapeConfig) {
     super(config);

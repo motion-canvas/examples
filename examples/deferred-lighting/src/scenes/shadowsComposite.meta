@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "highlight_stencil",
+      "targetTime": 4.117007829857009
+    },
+    {
+      "name": "bits",
+      "targetTime": 5.788659108085122
+    },
+    {
+      "name": "use_mesh_highlight",
+      "targetTime": 10.65402393447193
+    },
+    {
+      "name": "use_mesh",
+      "targetTime": 12.387048995496896
+    },
+    {
+      "name": "set_first_highlight",
+      "targetTime": 13.486902698843645
+    },
+    {
+      "name": "set_first",
+      "targetTime": 14.64379557682551
+    },
+    {
+      "name": "first_not_set_highlight",
+      "targetTime": 15.396199037238986
+    },
+    {
+      "name": "first_not_set",
+      "targetTime": 18.2644008084999
+    },
+    {
+      "name": "this_works",
+      "targetTime": 24.441061547673566
+    },
+    {
+      "name": "but_insides",
+      "targetTime": 27.811426852580375
+    },
+    {
+      "name": "to_fix_this",
+      "targetTime": 32.248968626594205
+    },
+    {
+      "name": "lets_use",
+      "targetTime": 32.6
+    },
+    {
+      "name": "start_with_shadow_highlgiht",
+      "targetTime": 37.00547610412056
+    },
+    {
+      "name": "start_with_shadow",
+      "targetTime": 37.920365504171926
+    },
+    {
+      "name": "cut_out_sprites",
+      "targetTime": 38.94784715027577
+    },
+    {
+      "name": "then_render_light",
+      "targetTime": 39.76195721345883
+    },
+    {
+      "name": "its_better",
+      "targetTime": 41.30516790660151
+    },
+    {
+      "name": "still_problem",
+      "targetTime": 43.60471837601711
+    },
+    {
+      "name": "keep",
+      "targetTime": 46.41210883723496
+    },
+    {
+      "name": "ideally",
+      "targetTime": 50.21313121656517
+    },
+    {
+      "name": "fortunately",
+      "targetTime": 53.11043929899602
+    },
+    {
+      "name": "next",
+      "targetTime": 58.43677456863713
+    }
+  ],
+  "seed": 860427234
+}

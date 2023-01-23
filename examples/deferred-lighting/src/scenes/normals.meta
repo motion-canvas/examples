@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "rotate",
+      "targetTime": 2.1402110695784446
+    },
+    {
+      "name": "flatten",
+      "targetTime": 5.261967303317812
+    },
+    {
+      "name": "show_flatten",
+      "targetTime": 6.817838845200184
+    },
+    {
+      "name": "normals_up",
+      "targetTime": 8.365156031391273
+    },
+    {
+      "name": "instead",
+      "targetTime": 10.93652407936296
+    },
+    {
+      "name": "adjust_normals",
+      "targetTime": 13.310996600032727
+    },
+    {
+      "name": "as_3d",
+      "targetTime": 14.984267374039922
+    },
+    {
+      "name": "this_way",
+      "targetTime": 19.03766219183985
+    },
+    {
+      "name": "for_any",
+      "targetTime": 19.666666666666668
+    },
+    {
+      "name": "move_normal",
+      "targetTime": 20.513378219523585
+    },
+    {
+      "name": "packing_start",
+      "targetTime": 29.098044487677914
+    },
+    {
+      "name": "add_one",
+      "targetTime": 33.54762415642811
+    },
+    {
+      "name": "divide_two",
+      "targetTime": 34.874770912649076
+    },
+    {
+      "name": "red",
+      "targetTime": 37.33749295286004
+    },
+    {
+      "name": "green",
+      "targetTime": 37.90397170967344
+    },
+    {
+      "name": "next",
+      "targetTime": 39.995955415085426
+    }
+  ],
+  "seed": 4186964097
+}

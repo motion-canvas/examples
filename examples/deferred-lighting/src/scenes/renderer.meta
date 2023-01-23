@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "passes",
+      "targetTime": 6.33687219446945
+    },
+    {
+      "name": "parallax",
+      "targetTime": 8.696209392479611
+    },
+    {
+      "name": "move",
+      "targetTime": 10.805443857311976
+    },
+    {
+      "name": "next",
+      "targetTime": 12.626225725782666
+    }
+  ],
+  "seed": 2609523999
+}
