@@ -1,6 +1,0 @@
-{
-  "extends": "@motion-canvas/core/tsconfig.project.json",
-  "compilerOptions": {
-    "baseUrl": "src"
-  }
-}
