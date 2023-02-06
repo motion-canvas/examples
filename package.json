@@ -4,8 +4,8 @@
   "description": "A set of examples for Motion Canvas",
   "license": "MIT",
   "scripts": {
-    "animating-with-code": "npm run serve -w examples/animating-with-code",
     "deferred-lighting": "npm run serve -w examples/deferred-lighting",
+    "motion-canvas": "npm run serve -w examples/motion-canvas",
     "lint": "eslint \"examples/**/src/**/*.ts?(x)\"",
     "lint:fix": "eslint --fix \"examples/**/src/**/*.ts?(x)\"",
     "prettier": "prettier --check \"examples/**/src/**/*.ts?(x)\"",

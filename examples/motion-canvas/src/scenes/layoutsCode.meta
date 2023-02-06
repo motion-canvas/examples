@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "seed": 2203922065,
+  "timeEvents": [
+    {
+      "name": "select",
+      "targetTime": 1.1907308388959317
+    },
+    {
+      "name": "move_x",
+      "targetTime": 1.7730843369119138
+    },
+    {
+      "name": "move_y",
+      "targetTime": 3.037707114760591
+    },
+    {
+      "name": "rotate",
+      "targetTime": 4.488035290437081
+    },
+    {
+      "name": "morph",
+      "targetTime": 8.877959046659171
+    },
+    {
+      "name": "layout_prop",
+      "targetTime": 11.239672551779778
+    },
+    {
+      "name": "css",
+      "targetTime": 16.078563099009383
+    },
+    {
+      "name": "however",
+      "targetTime": 21.32780554489242
+    },
+    {
+      "name": "box",
+      "targetTime": 24.726768328834524
+    },
+    {
+      "name": "animate",
+      "targetTime": 26.102742142886743
+    },
+    {
+      "name": "50%",
+      "targetTime": 28.18987319278836
+    },
+    {
+      "name": "height",
+      "targetTime": 30.35393903186167
+    },
+    {
+      "name": "second",
+      "targetTime": 32.81582460767967
+    },
+    {
+      "name": "translation",
+      "targetTime": 36.376257573685166
+    },
+    {
+      "name": "next",
+      "targetTime": 40.68088195464852
+    }
+  ]
+}

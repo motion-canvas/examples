@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "seed": 2591187991,
+  "timeEvents": [
+    {
+      "name": "signal",
+      "targetTime": 1.027033421301095
+    },
+    {
+      "name": "name_radius",
+      "targetTime": 2.5255758174814606
+    },
+    {
+      "name": "name_3",
+      "targetTime": 4.098203079531395
+    },
+    {
+      "name": "area_signal",
+      "targetTime": 4.9
+    },
+    {
+      "name": "callback",
+      "targetTime": 7.43561419969127
+    },
+    {
+      "name": "invoke",
+      "targetTime": 12.88034841097715
+    },
+    {
+      "name": "of_course",
+      "targetTime": 16.12141735760023
+    },
+    {
+      "name": "text",
+      "targetTime": 26.876539752928668
+    },
+    {
+      "name": "hardcoded",
+      "targetTime": 30.292938187091604
+    },
+    {
+      "name": "text_callback",
+      "targetTime": 36.56574547795855
+    },
+    {
+      "name": "text_animate",
+      "targetTime": 40.41142367310262
+    },
+    {
+      "name": "circle",
+      "targetTime": 47.88398873355143
+    },
+    {
+      "name": "offset",
+      "targetTime": 51.20495540806905
+    },
+    {
+      "name": "line",
+      "targetTime": 54.74124890159577
+    },
+    {
+      "name": "radius",
+      "targetTime": 57.12379923267529
+    },
+    {
+      "name": "setup_once",
+      "targetTime": 61.000275699827945
+    },
+    {
+      "name": "animate_one",
+      "targetTime": 63.66409821593941
+    },
+    {
+      "name": "area_ref",
+      "targetTime": 70.51910300678543
+    },
+    {
+      "name": "area_change",
+      "targetTime": 72.42365379524448
+    },
+    {
+      "name": "update_loop",
+      "targetTime": 76.99345512816362
+    },
+    {
+      "name": "next",
+      "targetTime": 79.11276344430487
+    }
+  ]
+}

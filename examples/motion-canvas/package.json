@@ -1,0 +1,18 @@
+{
+  "name": "@examples/motion-canvas",
+  "private": true,
+  "description": "Source code for the Motion Canvas is now Open Source! video",
+  "license": "MIT",
+  "scripts": {
+    "serve": "vite"
+  },
+  "dependencies": {
+    "@motion-canvas/2d": "^2.0.0",
+    "@motion-canvas/core": "^2.0.0"
+  },
+  "devDependencies": {
+    "@motion-canvas/ui": "^2.0.0",
+    "@motion-canvas/vite-plugin": "^2.0.0",
+    "vite": "^3.0.0"
+  }
+}
