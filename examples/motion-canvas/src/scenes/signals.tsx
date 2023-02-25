@@ -157,6 +157,7 @@ export default makeScene2D(function* (view) {
         fill={'#ff6470'}
         radius={8}
         scale={0}
+        rotation={() => -145 + 80 * circle().scale.x()}
       />
       <Line
         ref={arrow}
@@ -182,7 +183,7 @@ export default makeScene2D(function* (view) {
   yield* waitUntil('circle');
   yield* circle().scale(1.5, 0.5, easeOutCubic);
   const task2 = yield loop(Infinity, () =>
-    all(circle().scale(1, 1).to(1.5, 1), square().rotation(-65, 1).to(-25, 1)),
+    circle().scale(1, 1).to(1.5, 1),
   );
 
   yield* waitUntil('square');
