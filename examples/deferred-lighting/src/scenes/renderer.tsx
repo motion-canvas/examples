@@ -1,13 +1,13 @@
 import {makeScene2D} from '@motion-canvas/2d';
 import {
-  Image,
+  Img,
   Layout,
   Rect,
   RectProps,
-  Text,
+  Txt,
 } from '@motion-canvas/2d/lib/components';
 import {all, delay, waitUntil} from '@motion-canvas/core/lib/flow';
-import {BlackLabel, Colors, WhiteLabel} from '../styles';
+import {applyViewStyles, BlackLabel, Colors, WhiteLabel} from '../styles';
 
 import layers from '../images/icons/layers.svg';
 import flare from '../images/icons/flare.svg';
@@ -29,6 +29,7 @@ import {
 import {invert} from '@motion-canvas/2d/lib/partials';
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   useContext(ctx => ctx.clearRect(-1920 / 2, -1080 / 2, 1920, 1080));
 
   function Pass({
@@ -53,12 +54,14 @@ export default makeScene2D(function* (view) {
     return (
       <Rect
         layout
-        fill={() => Color.lerp(Colors.surfaceLight, 'rgba(0, 0, 0, 0)', theme())}
+        fill={() =>
+          Color.lerp(Colors.surfaceLight, 'rgba(0, 0, 0, 0)', theme())
+        }
         radius={8}
-        ref={refs ? makeRef(refs, 'value'): ref}
+        ref={refs ? makeRef(refs, 'value') : ref}
         {...props}
       >
-        <Image
+        <Img
           filters={[invert(theme)]}
           opacity={() => linear(theme(), 0.87, 0.54)}
           width={40}
@@ -66,7 +69,7 @@ export default makeScene2D(function* (view) {
           margin={20}
           src={src}
         />
-        <Text
+        <Txt
           paddingRight={40}
           {...BlackLabel}
           fill={() => Color.lerp(BlackLabel.fill, WhiteLabel.fill, theme())}
@@ -74,7 +77,7 @@ export default makeScene2D(function* (view) {
           cache
         >
           {name}
-        </Text>
+        </Txt>
       </Rect>
     );
   }
@@ -103,7 +106,7 @@ export default makeScene2D(function* (view) {
         height={0}
         clip
       >
-        <Text
+        <Txt
           cache
           paddingLeft={40}
           paddingRight={40}
@@ -111,7 +114,7 @@ export default makeScene2D(function* (view) {
           {...WhiteLabel}
         >
           PIXEL ART RENDERER
-        </Text>
+        </Txt>
         <Layout
           ref={passes}
           direction="column"

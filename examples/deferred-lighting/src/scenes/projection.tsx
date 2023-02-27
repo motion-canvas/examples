@@ -3,25 +3,26 @@ import {all, sequence, waitUntil} from '@motion-canvas/core/lib/flow';
 import {Mesh, Vector, Vertex} from '../components';
 import {createRef} from '@motion-canvas/core/lib/utils';
 import {createComputed, createSignal} from '@motion-canvas/core/lib/signals';
-import {Image, Layout, Rect, Text} from '@motion-canvas/2d/lib/components';
+import {Img, Layout, Rect, Txt} from '@motion-canvas/2d/lib/components';
 import {Direction, Vector2} from '@motion-canvas/core/lib/types';
 
 import lightIcon from '../images/icons/point_light.svg';
 import {slideTransition} from '@motion-canvas/core/lib/transitions';
-import {Colors, WhiteLabel} from '../styles';
+import {applyViewStyles, Colors, WhiteLabel} from '../styles';
 import {clampRemap} from '@motion-canvas/core/lib/tweening';
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   const box = createRef<Rect>();
   const mesh = createRef<Mesh>();
-  const light = createRef<Image>();
+  const light = createRef<Img>();
 
   const size = 160;
   const wireframe = createSignal(0);
   yield view.add(
     <>
       <Layout ref={light} x={600} y={-300}>
-        <Image width={96} src={lightIcon} />
+        <Img width={96} src={lightIcon} />
       </Layout>
       <Mesh
         ref={mesh}
@@ -129,7 +130,7 @@ export default makeScene2D(function* (view) {
     });
 
     vertex.add(
-      <Text
+      <Txt
         position={() =>
           tangent.x !== 0
             ? new Vector2((tangent.x * vertex.tangentScale()) / 2, 40)

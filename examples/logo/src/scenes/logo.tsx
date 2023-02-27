@@ -27,7 +27,7 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <>
-      <Node rotation={-45} position={44} scale={0.8}>
+      <Node rotation={-45} position={44} scale={0.8} cache>
         <Node cache y={-270}>
           <Trail ref={trail1}>
             {range(3).map(_ => (
@@ -87,9 +87,10 @@ export default makeScene2D(function* (view) {
               width={100}
               radius={50}
               height={150}
-              fill={'#36393F'}
+              fill={'white'}
               offsetY={1}
               rotation={(360 / 5) * i}
+              compositeOperation={'destination-out'}
             />
           ))}
           {range(5).map(i => (

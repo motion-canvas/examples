@@ -5,8 +5,8 @@ import {Three} from '../components';
 import {slideTransition} from '@motion-canvas/core/lib/transitions';
 import {easeInExpo, easeOutExpo} from '@motion-canvas/core/lib/tweening';
 import {range, createRef, useScene} from '@motion-canvas/core/lib/utils';
-import {Image, Layout, Rect, Text} from '@motion-canvas/2d/lib/components';
-import {Colors, WhiteLabel} from '../styles';
+import {Img, Layout, Rect, Txt} from '@motion-canvas/2d/lib/components';
+import {applyViewStyles, Colors, WhiteLabel} from '../styles';
 import lightIcon from '../images/icons/point_light.svg';
 import {createShadow, createShadowMaterial} from '../three/createShadow';
 import * as THREE from 'three';
@@ -44,6 +44,7 @@ const basicMaterial = new THREE.MeshBasicMaterial({
 });
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   const texture = yield texturePromise;
   texture.minFilter = texture.magFilter = THREE.NearestFilter;
   normalMaterial.uniforms.map = {value: texture};
@@ -52,15 +53,17 @@ export default makeScene2D(function* (view) {
   const threeStencilA = createRef<Three>();
   const threeOut = createRef<Three>();
   const threeRect = createRef<Rect>();
-  const light = createRef<Image>();
+  const light = createRef<Img>();
 
-  const sceneLabel = createRef<Text>();
+  const sceneLabel = createRef<Txt>();
   const outputRect = createRef<Rect>();
   const stencilRect = createRef<Rect>();
   const selection = createRef<Rect>();
-  const stencilLabel = createRef<Text>();
+  const stencilLabel = createRef<Txt>();
 
-  let outputStencil = (_: THREE.WebGLRenderer) => {};
+  let outputStencil = (_: THREE.WebGLRenderer) => {
+    // do nothing
+  };
 
   yield view.add(
     <>
@@ -90,8 +93,8 @@ export default makeScene2D(function* (view) {
           onRender={renderer => renderer.clear()}
           zoom={45}
         />
-        <Image ref={light} width={48} src={lightIcon} opacity={0} />
-        <Text
+        <Img ref={light} width={48} src={lightIcon} opacity={0} />
+        <Txt
           layout={false}
           ref={sceneLabel}
           {...WhiteLabel}
@@ -102,7 +105,7 @@ export default makeScene2D(function* (view) {
           cache
         >
           SCENE
-        </Text>
+        </Txt>
       </Rect>
 
       <Rect
@@ -123,7 +126,7 @@ export default makeScene2D(function* (view) {
           onRender={renderer => renderer.clear()}
           zoom={45}
         >
-          <Text
+          <Txt
             layout={false}
             {...WhiteLabel}
             offsetX={-1}
@@ -133,7 +136,7 @@ export default makeScene2D(function* (view) {
             cache
           >
             RESULT
-          </Text>
+          </Txt>
         </Three>
       </Rect>
 
@@ -155,7 +158,7 @@ export default makeScene2D(function* (view) {
           onRender={renderer => renderer.clear()}
           zoom={45}
         >
-          <Text
+          <Txt
             ref={stencilLabel}
             layout={false}
             {...WhiteLabel}
@@ -165,7 +168,7 @@ export default makeScene2D(function* (view) {
             y={-450 / 2 + 10}
           >
             STENCIL
-          </Text>
+          </Txt>
         </Three>
       </Rect>
     </>,
@@ -355,7 +358,9 @@ export default makeScene2D(function* (view) {
   yield* waitUntil('to_fix_this');
   highlight().lineWidth(0);
   sceneLabel().text('ORIGINAL SPRITES');
-  outputStencil = () => {};
+  outputStencil = () => {
+    // do nothing
+  };
   threeStencilA().onRender = renderer => {
     renderer.setClearColor(0);
     renderer.clear();

@@ -1,5 +1,5 @@
 import {makeScene2D} from '@motion-canvas/2d/lib/scenes';
-import {Layout, Text, Rect} from '@motion-canvas/2d/lib/components';
+import {Layout, Txt, Rect} from '@motion-canvas/2d/lib/components';
 import {all, delay, sequence, waitUntil} from '@motion-canvas/core/lib/flow';
 import {LBuffer, Mesh, Slider, Three, Vertex} from '../components';
 
@@ -7,7 +7,7 @@ import * as light from '../three/light';
 import {createRef, makeRefs} from '@motion-canvas/core/lib/utils';
 import {Vector2} from '@motion-canvas/core/lib/types';
 
-import {Colors, WhiteLabel} from '../styles';
+import {applyViewStyles, Colors, WhiteLabel} from '../styles';
 
 // const theme = '#e91e63';
 // const theme = '#00bcd4';
@@ -17,6 +17,7 @@ import lightLeft from '../images/lights/leftColor.png';
 import shaded from '../images/lights/shaded.png';
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   yield light.setup();
   light.intensity(1);
   light.distance(0);
@@ -35,7 +36,7 @@ export default makeScene2D(function* (view) {
   const lightColorCode = createRef<Layout>();
   const shadedColorCode = createRef<Layout>();
   const volumeCode = createRef<Layout>();
-  const lightTitle = createRef<Text>();
+  const lightTitle = createRef<Txt>();
 
   yield view.add(
     <>
@@ -51,43 +52,43 @@ export default makeScene2D(function* (view) {
         ref={code}
       >
         <Layout ref={intensityCode}>
-          <Text fill={Colors.KEYWORD}>float</Text>
-          <Text fill={Colors.TEXT}>&nbsp;finalIntensity</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;=&nbsp;</Text>
-          <Text fill={Colors.TEXT}>intensity</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;*&nbsp;</Text>
-          <Text fill={Colors.TEXT}>radialFalloff</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;*&nbsp;</Text>
-          <Text fill={Colors.TEXT}>angularFalloff</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;*&nbsp;</Text>
-          <Text fill={Colors.TEXT}>normalFalloff</Text>
-          <Text fill={Colors.COMMENT}>;</Text>
+          <Txt fill={Colors.KEYWORD}>float</Txt>
+          <Txt fill={Colors.TEXT}>&nbsp;finalIntensity</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;=&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>intensity</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;*&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>radialFalloff</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;*&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>angularFalloff</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;*&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>normalFalloff</Txt>
+          <Txt fill={Colors.COMMENT}>;</Txt>
         </Layout>
         <Layout ref={lightColorCode} opacity={0} height={0}>
-          <Text fill={Colors.KEYWORD}>vec3</Text>
-          <Text fill={Colors.TEXT}>&nbsp;lightColor</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;=&nbsp;</Text>
-          <Text fill={Colors.TEXT}>finalIntensity</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;*&nbsp;</Text>
-          <Text fill={Colors.TEXT}>lightTint</Text>
-          <Text fill={Colors.COMMENT}>;</Text>
+          <Txt fill={Colors.KEYWORD}>vec3</Txt>
+          <Txt fill={Colors.TEXT}>&nbsp;lightColor</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;=&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>finalIntensity</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;*&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>lightTint</Txt>
+          <Txt fill={Colors.COMMENT}>;</Txt>
         </Layout>
         <Layout ref={shadedColorCode} opacity={0} height={0}>
-          <Text fill={Colors.KEYWORD}>vec3</Text>
-          <Text fill={Colors.TEXT}>&nbsp;shadedColor</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;=&nbsp;</Text>
-          <Text fill={Colors.TEXT}>baseColor</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;*&nbsp;</Text>
-          <Text fill={Colors.TEXT}>lightColor</Text>
-          <Text fill={Colors.COMMENT}>;</Text>
+          <Txt fill={Colors.KEYWORD}>vec3</Txt>
+          <Txt fill={Colors.TEXT}>&nbsp;shadedColor</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;=&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>baseColor</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;*&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>lightColor</Txt>
+          <Txt fill={Colors.COMMENT}>;</Txt>
         </Layout>
         <Layout ref={volumeCode} opacity={0} height={0}>
-          <Text fill={Colors.TEXT}>shadedColor</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;+=&nbsp;</Text>
-          <Text fill={Colors.TEXT}>lightColor</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;*&nbsp;</Text>
-          <Text fill={Colors.TEXT}>volumetricIntensity</Text>
-          <Text fill={Colors.COMMENT}>;</Text>
+          <Txt fill={Colors.TEXT}>shadedColor</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;+=&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>lightColor</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;*&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>volumetricIntensity</Txt>
+          <Txt fill={Colors.COMMENT}>;</Txt>
         </Layout>
       </Layout>
       <LBuffer refs={buffer} opacity={0} width={720 + 80} x={440} y={-113} />
@@ -109,7 +110,7 @@ export default makeScene2D(function* (view) {
           scene={light.threeScene}
           onRender={light.render}
         ></Three>
-        <Text
+        <Txt
           ref={lightTitle}
           offsetX={-1}
           offsetY={-1}
@@ -117,7 +118,7 @@ export default makeScene2D(function* (view) {
           x={() => three().size.x() / -2 + 20}
           y={() => three().size.y() / -2 + 10}
           cache
-        ></Text>
+        ></Txt>
       </Rect>
     </>,
   );
@@ -191,10 +192,10 @@ export default makeScene2D(function* (view) {
       y={40}
     >
       <Layout paddingBottom={8}>
-        <Text grow={1} {...WhiteLabel}>
+        <Txt grow={1} {...WhiteLabel}>
           volumetricIntensity
-        </Text>
-        <Text
+        </Txt>
+        <Txt
           {...WhiteLabel}
           fill={theme}
           text={() => light.volume().toFixed(2)}

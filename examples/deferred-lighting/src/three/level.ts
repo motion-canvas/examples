@@ -38,7 +38,9 @@ const orbit = new THREE.Group();
 orbit.add(camera);
 threeScene.add(orbit);
 
-const apply = createComputed(() => {});
+const apply = createComputed(() => {
+  // do nothing
+});
 
 async function setup() {
   circle.scale.setScalar(108);

@@ -1,20 +1,10 @@
 import {makeScene2D} from '@motion-canvas/2d/lib/scenes';
-import {
-  Circle,
-  Layout,
-  Text,
-  Image,
-  Rect,
-} from '@motion-canvas/2d/lib/components';
+import {Circle, Layout, Txt, Img, Rect} from '@motion-canvas/2d/lib/components';
 import {all, delay, sequence, waitUntil} from '@motion-canvas/core/lib/flow';
 import {ArcVector, Mesh, Slider, Three, Vector, Vertex} from '../components';
 
 import * as light from '../three/light';
-import {
-  makeRef,
-  createRef,
-  makeRefs,
-} from '@motion-canvas/core/lib/utils';
+import {makeRef, createRef, makeRefs} from '@motion-canvas/core/lib/utils';
 import {Color, Direction, Vector2} from '@motion-canvas/core/lib/types';
 import {createComputed, createSignal} from '@motion-canvas/core/lib/signals';
 import {
@@ -28,7 +18,7 @@ import {
 import {slideTransition} from '@motion-canvas/core/lib/transitions';
 import lightIcon from '../images/icons/point_light.svg';
 import normals from '../images/frames/normals.png';
-import {Colors, WhiteLabel} from '../styles';
+import {applyViewStyles, Colors, WhiteLabel} from '../styles';
 import {createSampler, Sampler} from '../Sample';
 import {Vector3} from 'three';
 import {Gradient} from '@motion-canvas/2d/lib/partials';
@@ -38,6 +28,7 @@ import {Gradient} from '@motion-canvas/2d/lib/partials';
 const theme = Colors.FUNCTION;
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   yield light.setup();
 
   const three = createRef<Three>();
@@ -47,10 +38,10 @@ export default makeScene2D(function* (view) {
   const distanceParam = makeRefs<typeof Parameter>();
   const angleParam = makeRefs<typeof Parameter>();
   const direction = createRef<Vector>();
-  const directionLength = createRef<Text>();
-  const positionLabel = createRef<Text>();
+  const directionLength = createRef<Txt>();
+  const positionLabel = createRef<Txt>();
   const arcVector = createRef<ArcVector>();
-  const arcLength = createRef<Text>();
+  const arcLength = createRef<Txt>();
   const mesh = createRef<Mesh>();
 
   function Parameter({
@@ -58,17 +49,17 @@ export default makeScene2D(function* (view) {
     children,
     value = 0,
   }: {
-    refs: {group: Layout; slider: Slider; text: Text};
+    refs: {group: Layout; slider: Slider; text: Txt};
     children: string;
     value?: number;
   }) {
     const result = (
       <Layout ref={makeRef(refs, 'group')} direction="column" opacity={0}>
         <Layout paddingBottom={8}>
-          <Text grow={1} {...WhiteLabel}>
+          <Txt grow={1} {...WhiteLabel}>
             {children}
-          </Text>
-          <Text ref={makeRef(refs, 'text')} {...WhiteLabel} fill={theme} />
+          </Txt>
+          <Txt ref={makeRef(refs, 'text')} {...WhiteLabel} fill={theme} />
         </Layout>
         <Slider
           ref={makeRef(refs, 'slider')}
@@ -96,7 +87,7 @@ export default makeScene2D(function* (view) {
   const codeIn = createRef<Layout>();
   const codeIn2 = createRef<Layout>();
   const codeOut = createRef<Layout>();
-  const dotValue = createRef<Text>();
+  const dotValue = createRef<Txt>();
 
   // const lightColor = '#ffeb3b';
   const lightColor = Colors.FUNCTION;
@@ -129,9 +120,9 @@ export default makeScene2D(function* (view) {
 
       <Layout x={-240} ref={orbit}>
         <Circle ref={origin} opacity={0} width={30} height={30} fill={theme}>
-          <Text {...WhiteLabel} opacity={1} y={60}>
+          <Txt {...WhiteLabel} opacity={1} y={60}>
             (0, 0)
-          </Text>
+          </Txt>
         </Circle>
         <Circle
           ref={circle}
@@ -143,7 +134,7 @@ export default makeScene2D(function* (view) {
           shadowBlur={8}
           shadowOffsetY={2}
         >
-          <Text ref={positionLabel} y={-60} opacity={0} {...WhiteLabel} />
+          <Txt ref={positionLabel} y={-60} opacity={0} {...WhiteLabel} />
         </Circle>
         <ArcVector
           lineDash={[0, 16]}
@@ -158,7 +149,7 @@ export default makeScene2D(function* (view) {
           endOffset={30}
           counter
         >
-          <Text
+          <Txt
             {...WhiteLabel}
             fontWeight={700}
             opacity={0}
@@ -177,7 +168,7 @@ export default makeScene2D(function* (view) {
           endOffset={30}
           end={0}
         >
-          <Text {...WhiteLabel} opacity={0} ref={directionLength} y={-40} />
+          <Txt {...WhiteLabel} opacity={0} ref={directionLength} y={-40} />
         </Vector>
       </Layout>
       <Layout
@@ -219,7 +210,7 @@ export default makeScene2D(function* (view) {
           lineWidth={8}
           stroke={lightColor}
         />
-        <Image
+        <Img
           src={lightIcon}
           width={() => linear(clampRemap(0, size / 3, 0, 1, radius()), 0, 96)}
         />
@@ -236,30 +227,30 @@ export default makeScene2D(function* (view) {
         ref={code}
       >
         <Layout>
-          <Text fill={Colors.KEYWORD}>float</Text>
-          <Text fill={Colors.TEXT}>&nbsp;radialFalloff</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;=&nbsp;</Text>
-          <Text fill={Colors.FUNCTION}>pow</Text>
-          <Text fill={Colors.COMMENT}>(</Text>
-          <Text fill={Colors.NUMBER}>1.0</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;-&nbsp;</Text>
-          <Text fill={Colors.TEXT}>distance</Text>
-          <Text fill={Colors.COMMENT}>,&nbsp;</Text>
-          <Text fill={Colors.NUMBER}>2.0</Text>
-          <Text fill={Colors.COMMENT}>);</Text>
+          <Txt fill={Colors.KEYWORD}>float</Txt>
+          <Txt fill={Colors.TEXT}>&nbsp;radialFalloff</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;=&nbsp;</Txt>
+          <Txt fill={Colors.FUNCTION}>pow</Txt>
+          <Txt fill={Colors.COMMENT}>(</Txt>
+          <Txt fill={Colors.NUMBER}>1.0</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;-&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>distance</Txt>
+          <Txt fill={Colors.COMMENT}>,&nbsp;</Txt>
+          <Txt fill={Colors.NUMBER}>2.0</Txt>
+          <Txt fill={Colors.COMMENT}>);</Txt>
         </Layout>
         <Layout>
-          <Text fill={Colors.KEYWORD}>float</Text>
-          <Text fill={Colors.TEXT}>&nbsp;angularFalloff</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;=&nbsp;</Text>
-          <Text fill={Colors.FUNCTION}>smoothstep</Text>
-          <Text fill={Colors.COMMENT}>(</Text>
-          <Text fill={Colors.TEXT}>maxAngle</Text>
-          <Text fill={Colors.COMMENT}>,&nbsp;</Text>
-          <Text fill={Colors.TEXT}>minAngle</Text>
-          <Text fill={Colors.COMMENT}>,&nbsp;</Text>
-          <Text fill={Colors.TEXT}>angle</Text>
-          <Text fill={Colors.COMMENT}>);</Text>
+          <Txt fill={Colors.KEYWORD}>float</Txt>
+          <Txt fill={Colors.TEXT}>&nbsp;angularFalloff</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;=&nbsp;</Txt>
+          <Txt fill={Colors.FUNCTION}>smoothstep</Txt>
+          <Txt fill={Colors.COMMENT}>(</Txt>
+          <Txt fill={Colors.TEXT}>maxAngle</Txt>
+          <Txt fill={Colors.COMMENT}>,&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>minAngle</Txt>
+          <Txt fill={Colors.COMMENT}>,&nbsp;</Txt>
+          <Txt fill={Colors.TEXT}>angle</Txt>
+          <Txt fill={Colors.COMMENT}>);</Txt>
         </Layout>
       </Layout>
       <Layout
@@ -273,32 +264,32 @@ export default makeScene2D(function* (view) {
         opacity={0}
       >
         <Layout ref={codeIn} opacity={0} width={0} clip>
-          <Text fill={Colors.KEYWORD}>float</Text>
-          <Text fill={Colors.TEXT}>&nbsp;normalFalloff</Text>
-          <Text fill={Colors.COMMENT}>&nbsp;=&nbsp;</Text>
-          <Text fill={Colors.FUNCTION}>clamp</Text>
-          <Text fill={Colors.COMMENT}>(</Text>
+          <Txt fill={Colors.KEYWORD}>float</Txt>
+          <Txt fill={Colors.TEXT}>&nbsp;normalFalloff</Txt>
+          <Txt fill={Colors.COMMENT}>&nbsp;=&nbsp;</Txt>
+          <Txt fill={Colors.FUNCTION}>clamp</Txt>
+          <Txt fill={Colors.COMMENT}>(</Txt>
         </Layout>
-        <Text fill={Colors.FUNCTION}>dot</Text>
-        <Text fill={Colors.COMMENT}>(</Text>
-        <Text fill={Colors.TEXT}>dirToLight</Text>
-        <Text fill={Colors.COMMENT}>,&nbsp;</Text>
-        <Text fill={Colors.TEXT}>normalVector</Text>
-        <Text fill={Colors.COMMENT}>)</Text>
+        <Txt fill={Colors.FUNCTION}>dot</Txt>
+        <Txt fill={Colors.COMMENT}>(</Txt>
+        <Txt fill={Colors.TEXT}>dirToLight</Txt>
+        <Txt fill={Colors.COMMENT}>,&nbsp;</Txt>
+        <Txt fill={Colors.TEXT}>normalVector</Txt>
+        <Txt fill={Colors.COMMENT}>)</Txt>
         <Layout>
           <Layout ref={codeOut}>
-            <Text fill={Colors.COMMENT}>&nbsp;=&nbsp;</Text>
-            <Text ref={dotValue} fill={Colors.NUMBER}>
+            <Txt fill={Colors.COMMENT}>&nbsp;=&nbsp;</Txt>
+            <Txt ref={dotValue} fill={Colors.NUMBER}>
               0.0
-            </Text>
-            <Text fill={Colors.COMMENT}>;</Text>
+            </Txt>
+            <Txt fill={Colors.COMMENT}>;</Txt>
           </Layout>
           <Layout ref={codeIn2} opacity={0}>
-            <Text fill={Colors.COMMENT}>,&nbsp;</Text>
-            <Text fill={Colors.NUMBER}>0.0</Text>
-            <Text fill={Colors.COMMENT}>,&nbsp;</Text>
-            <Text fill={Colors.NUMBER}>1.0</Text>
-            <Text fill={Colors.COMMENT}>);</Text>
+            <Txt fill={Colors.COMMENT}>,&nbsp;</Txt>
+            <Txt fill={Colors.NUMBER}>0.0</Txt>
+            <Txt fill={Colors.COMMENT}>,&nbsp;</Txt>
+            <Txt fill={Colors.NUMBER}>1.0</Txt>
+            <Txt fill={Colors.COMMENT}>);</Txt>
           </Layout>
         </Layout>
       </Layout>
@@ -610,7 +601,7 @@ export default makeScene2D(function* (view) {
   positionLabel()
     .text(`(${fragmentPosition.x}, ${fragmentPosition.y})`)
     .position.y(60);
-  (origin().children()[0] as Text)
+  (origin().children()[0] as Txt)
     .text(`(${lightPosition.x}, ${lightPosition.y})`)
     .shadowColor('#141414')
     .shadowBlur(12)
@@ -681,9 +672,9 @@ export default makeScene2D(function* (view) {
         gap={48}
       >
         <Layout ref={red} direction="column" opacity={0}>
-          <Text {...WhiteLabel} fill={Colors.red} paddingBottom={8}>
+          <Txt {...WhiteLabel} fill={Colors.red} paddingBottom={8}>
             Red
-          </Text>
+          </Txt>
           <Slider
             ref={redSlider}
             value={() => normalVector().x / 2 + 0.5}
@@ -691,9 +682,9 @@ export default makeScene2D(function* (view) {
           />
         </Layout>
         <Layout ref={green} direction="column" opacity={0}>
-          <Text {...WhiteLabel} fill={Colors.green} paddingBottom={8}>
+          <Txt {...WhiteLabel} fill={Colors.green} paddingBottom={8}>
             Green
-          </Text>
+          </Txt>
           <Slider
             ref={greenSlider}
             value={() => -normalVector().y / 2 + 0.5}
@@ -701,9 +692,9 @@ export default makeScene2D(function* (view) {
           />
         </Layout>
         <Layout ref={blue} direction="column" opacity={0}>
-          <Text {...WhiteLabel} fill={Colors.blue} paddingBottom={8}>
+          <Txt {...WhiteLabel} fill={Colors.blue} paddingBottom={8}>
             Blue
-          </Text>
+          </Txt>
           <Slider
             value={light.normalIntensity}
             ref={blueSlider}

@@ -1,18 +1,19 @@
 import {makeScene2D} from '@motion-canvas/2d';
 import {all, delay, waitUntil} from '@motion-canvas/core/lib/flow';
 import {GBuffer, Vector} from '../components';
-import {Image, Rect, Text} from '@motion-canvas/2d/lib/components';
+import {Img, Rect, Txt} from '@motion-canvas/2d/lib/components';
 import color from '../images/frames/colors.png';
 import wireframe from '../images/frames/wireframe.png';
-import {WhiteLabel} from '../styles';
+import {applyViewStyles, WhiteLabel} from '../styles';
 import {createRef, makeRefs} from '@motion-canvas/core/lib/utils';
 
 import ballNormalTex from '../images/frames/ball_normal.png';
 import {invert} from '@motion-canvas/2d/lib/partials';
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   const scene = createRef<Rect>();
-  const ballNormal = createRef<Image>();
+  const ballNormal = createRef<Img>();
   const buffer = makeRefs<typeof GBuffer>();
 
   yield view.add(
@@ -27,20 +28,20 @@ export default makeScene2D(function* (view) {
         opacity={0}
         clip
       >
-        <Image width={960} height={540} src={color} smoothing={false} />
-        <Image
+        <Img width={960} height={540} src={color} smoothing={false} />
+        <Img
           filters={[invert(1)]}
           width={960}
           height={540}
           src={wireframe}
           smoothing={false}
         />
-        <Text offsetX={-1} offsetY={-1} x={-450} y={-250} {...WhiteLabel}>
+        <Txt offsetX={-1} offsetY={-1} x={-450} y={-250} {...WhiteLabel}>
           SCENE
-        </Text>
+        </Txt>
       </Rect>
       <GBuffer refs={buffer} x={540} width={520} />
-      <Image
+      <Img
         ref={ballNormal}
         src={ballNormalTex}
         width={216}

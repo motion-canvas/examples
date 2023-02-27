@@ -1,16 +1,16 @@
 import {makeScene2D} from '@motion-canvas/2d';
 import {waitUntil} from '@motion-canvas/core/lib/flow';
-import {Text} from '@motion-canvas/2d/lib/components';
+import {Txt} from '@motion-canvas/2d/lib/components';
 import {createRef} from '@motion-canvas/core/lib/utils';
 import {linear} from '@motion-canvas/core/lib/tweening';
 import {Direction} from '@motion-canvas/core/lib/types';
 import {slideTransition} from '@motion-canvas/core/lib/transitions';
 
 export default makeScene2D(function* (view) {
-  const label = createRef<Text>();
+  const label = createRef<Txt>();
   yield view.add(
     <>
-      <Text
+      <Txt
         ref={label}
         fontSize={120}
         lineHeight={120}

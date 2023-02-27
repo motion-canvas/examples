@@ -143,7 +143,7 @@ export class Three extends Layout {
     return color;
   }
 
-  dispose() {
+  public dispose() {
     dispose(this.renderer);
   }
 }

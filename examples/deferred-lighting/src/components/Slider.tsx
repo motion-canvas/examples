@@ -71,11 +71,9 @@ export class Slider extends Layout {
 
     this.handleHighlight.size(() => map(20, 60, this.highlight()));
     this.handleHighlight.position.x(() => this.size.x() * (this.value() - 0.5));
-    this.handleHighlight.fill(() => {
-      const color = this.color();
-      color.alpha(map(0, 0.2, this.highlight()));
-      return color;
-    });
+    this.handleHighlight.fill(() =>
+      this.color().alpha(map(0, 0.2, this.highlight())),
+    );
 
     this.handle.fill(this.color);
 

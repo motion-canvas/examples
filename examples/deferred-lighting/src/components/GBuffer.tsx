@@ -1,9 +1,9 @@
 import {
-  Image,
-  ImageProps,
+  Img,
+  ImgProps,
   Rect,
   RectProps,
-  Text,
+  Txt,
 } from '@motion-canvas/2d/lib/components';
 import {WhiteLabel} from '../styles';
 import color from '../images/frames/colors.png';
@@ -19,10 +19,10 @@ export function Frame({
   ...props
 }: {
   name: string;
-  refs: {value: Image; text: Text};
-} & ImageProps) {
+  refs: {value: Img; text: Txt};
+} & ImgProps) {
   return (
-    <Image
+    <Img
       ref={refs ? makeRef(refs, 'value') : ref}
       radius={8}
       width={'100%'}
@@ -31,7 +31,7 @@ export function Frame({
       smoothing={false}
       {...props}
     >
-      <Text
+      <Txt
         layout={false}
         offsetX={-1}
         offsetY={-1}
@@ -40,8 +40,8 @@ export function Frame({
         {...WhiteLabel}
       >
         {name}
-      </Text>
-    </Image>
+      </Txt>
+    </Img>
   );
 }
 
@@ -53,7 +53,7 @@ export function GBuffer({
   hidden?: boolean;
   refs: {
     value: Rect;
-    text: Text;
+    text: Txt;
     color: RefsProperty<typeof Frame>;
     normals: RefsProperty<typeof Frame>;
   };
@@ -87,7 +87,7 @@ export function LBuffer({
 }: {
   refs: {
     value: Rect;
-    text: Text;
+    text: Txt;
     color: RefsProperty<typeof Frame>;
   };
 } & RectProps) {
@@ -110,7 +110,7 @@ export function Buffer({
   text,
   children,
   ...props
-}: {text: string; refs: {value: Rect; text: Text}} & RectProps) {
+}: {text: string; refs: {value: Rect; text: Txt}} & RectProps) {
   return (
     <Rect
       ref={refs ? makeRef(refs, 'value') : ref}
@@ -122,9 +122,9 @@ export function Buffer({
       gap={20}
       {...props}
     >
-      <Text ref={makeRef(refs, 'text')} {...WhiteLabel} marginTop={-20}>
+      <Txt ref={makeRef(refs, 'text')} {...WhiteLabel} marginTop={-20}>
         {text}
-      </Text>
+      </Txt>
       {children}
     </Rect>
   );

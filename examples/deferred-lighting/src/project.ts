@@ -1,4 +1,4 @@
-import {makeProject} from '@motion-canvas/core/lib';
+import {makeProject} from '@motion-canvas/core';
 
 import renderer from './scenes/renderer?scene';
 import layers from './scenes/layers?scene';
@@ -34,6 +34,5 @@ export default makeProject({
     transparency,
     ending,
   ],
-  background: '#141414',
   audio: voice,
 });

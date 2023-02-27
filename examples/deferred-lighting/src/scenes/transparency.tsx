@@ -10,7 +10,7 @@ import normalVertex from '../shaders/normalSmooth.vertex.glsl?raw';
 import {createLight} from '../three/createLight';
 
 import circleNormalImage from '../images/frames/ball_normal.png';
-import {Colors} from '../styles';
+import {applyViewStyles, Colors} from '../styles';
 import {useScene, createRef} from '@motion-canvas/core/lib/utils';
 import {createSignal} from '@motion-canvas/core/lib/signals';
 import {Layout} from '@motion-canvas/2d/lib/components';
@@ -55,6 +55,7 @@ const circleMaterialA = new THREE.MeshBasicMaterial({
 });
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   const circleNormalTex: THREE.Texture = yield circleNormalTexPromise;
   circleNormalTex.minFilter = circleNormalTex.magFilter = THREE.NearestFilter;
   normalMaterialA.uniforms.map = normalMaterial.uniforms.map = {
@@ -232,14 +233,11 @@ export default makeScene2D(function* (view) {
   yield* all(normalOpacity(1, 0.5));
 
   yield* waitUntil('sometimes');
-  circleMaterialA.stencilFunc = THREE.EqualStencilFunc
+  circleMaterialA.stencilFunc = THREE.EqualStencilFunc;
   circleColor('white');
   opacity(1);
   yield* waitUntil('decals');
-  yield* all(
-    circleX(72, 1.25),
-    circleY(24 * 5.25, 1),
-  );
+  yield* all(circleX(72, 1.25), circleY(24 * 5.25, 1));
 
   yield* waitUntil('next');
 });

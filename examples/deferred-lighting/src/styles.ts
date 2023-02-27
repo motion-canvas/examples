@@ -1,3 +1,9 @@
+import type {View2D} from '@motion-canvas/2d/lib/components';
+
+export function applyViewStyles(view: View2D) {
+  view.lineHeight(64);
+}
+
 export const Colors = {
   whiteLabel: 'rgba(255, 255, 255, 0.54)',
   blackLabel: 'rgba(0, 0, 0, 0.87)',

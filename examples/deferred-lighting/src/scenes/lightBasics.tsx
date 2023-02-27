@@ -2,15 +2,16 @@ import {makeScene2D} from '@motion-canvas/2d';
 import {all, waitUntil} from '@motion-canvas/core/lib/flow';
 import {Frame, GBuffer, LBuffer} from '../components';
 import {Vector2} from '@motion-canvas/core/lib/types';
-import {Layout, Rect, Text, TextProps} from '@motion-canvas/2d/lib/components';
+import {Layout, Rect, Txt, TxtProps} from '@motion-canvas/2d/lib/components';
 import color from '../images/frames/colors.png';
 import lightBoth from '../images/lights/both.png';
 import lightLeft from '../images/lights/left.png';
 import lightRight from '../images/lights/right.png';
-import {WhiteLabel} from '../styles';
+import {applyViewStyles, WhiteLabel} from '../styles';
 import {createRef, makeRefs} from '@motion-canvas/core/lib/utils';
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   const gbuffer = makeRefs<typeof GBuffer>();
   const lbuffer = makeRefs<typeof LBuffer>();
 
@@ -24,16 +25,16 @@ export default makeScene2D(function* (view) {
   const colorLeftBG = createRef<Rect>();
   const colorRightBG = createRef<Rect>();
   const fullLightBG = createRef<Rect>();
-  const multiply = createRef<Text>();
-  const multiply2 = createRef<Text>();
-  const equal = createRef<Text>();
-  const addition = createRef<Text>();
+  const multiply = createRef<Txt>();
+  const multiply2 = createRef<Txt>();
+  const equal = createRef<Txt>();
+  const addition = createRef<Txt>();
   const multiplyABG = createRef<Rect>();
   const multiplyBBG = createRef<Rect>();
 
-  function Sign(props: TextProps) {
+  function Sign(props: TxtProps) {
     return (
-      <Text
+      <Txt
         {...WhiteLabel}
         fontSize={28 * 4}
         fontWeight={500}

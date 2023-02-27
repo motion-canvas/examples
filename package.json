@@ -15,7 +15,13 @@
   "workspaces": [
     "examples/*"
   ],
+  "dependencies": {
+    "@motion-canvas/2d": "3.0.0",
+    "@motion-canvas/core": "3.0.0"
+  },
   "devDependencies": {
+    "@motion-canvas/ui": "3.0.1",
+    "@motion-canvas/vite-plugin": "3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "eslint": "^8.18.0",

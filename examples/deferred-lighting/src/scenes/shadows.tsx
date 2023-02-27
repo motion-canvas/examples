@@ -7,19 +7,20 @@ import {slideTransition} from '@motion-canvas/core/lib/transitions';
 import {Direction} from '@motion-canvas/core/lib/types';
 import {easeOutExpo} from '@motion-canvas/core/lib/tweening';
 import {createRef, makeRefs} from '@motion-canvas/core/lib/utils';
-import {Image, Rect, Text} from '@motion-canvas/2d/lib/components';
-import {WhiteLabel} from '../styles';
+import {Img, Rect, Txt} from '@motion-canvas/2d/lib/components';
+import {applyViewStyles, WhiteLabel} from '../styles';
 import lightIcon from '../images/icons/point_light.svg';
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   yield shadows.setup();
 
   const three = createRef<Three>();
   const threeRect = createRef<Rect>();
-  const light = createRef<Image>();
+  const light = createRef<Img>();
 
   const buffer = makeRefs<typeof LBuffer>();
-  const sceneLabel = createRef<Text>();
+  const sceneLabel = createRef<Txt>();
 
   yield view.add(
     <>
@@ -34,8 +35,8 @@ export default makeScene2D(function* (view) {
           onRender={shadows.render}
           zoom={1080}
         />
-        <Image ref={light} width={96} src={lightIcon} opacity={0} />
-        <Text
+        <Img ref={light} width={96} src={lightIcon} opacity={0} />
+        <Txt
           layout={false}
           ref={sceneLabel}
           {...WhiteLabel}
@@ -47,7 +48,7 @@ export default makeScene2D(function* (view) {
           cache
         >
           SCENE
-        </Text>
+        </Txt>
       </Rect>
       <LBuffer refs={buffer} width={720 + 80} x={440} y={-32} opacity={0} />
     </>,
@@ -67,7 +68,7 @@ export default makeScene2D(function* (view) {
         onRender={shadows.renderOutput}
         zoom={1080}
       >
-        <Text
+        <Txt
           layout={false}
           {...WhiteLabel}
           offsetX={-1}
@@ -77,13 +78,13 @@ export default makeScene2D(function* (view) {
           cache
         >
           SHADED COLOR
-        </Text>
+        </Txt>
       </Three>
     </Rect>,
   );
 
   const stencilRect = createRef<Rect>();
-  const stencilLabel = createRef<Text>();
+  const stencilLabel = createRef<Txt>();
 
   buffer.value.add(
     <Rect
@@ -103,7 +104,7 @@ export default makeScene2D(function* (view) {
         onRender={shadows.renderStencil}
         zoom={1080}
       >
-        <Text
+        <Txt
           ref={stencilLabel}
           layout={false}
           {...WhiteLabel}
@@ -113,7 +114,7 @@ export default makeScene2D(function* (view) {
           y={-202.5 + 10}
         >
           STENCIL
-        </Text>
+        </Txt>
       </Three>
     </Rect>,
   );

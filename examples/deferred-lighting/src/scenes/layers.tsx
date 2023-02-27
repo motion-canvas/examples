@@ -1,5 +1,5 @@
 import {makeScene2D} from '@motion-canvas/2d';
-import {Image, Layout, Text} from '@motion-canvas/2d/lib/components';
+import {Img, Layout, Txt} from '@motion-canvas/2d/lib/components';
 import {
   all,
   delay,
@@ -7,7 +7,7 @@ import {
   sequence,
   waitUntil,
 } from '@motion-canvas/core/lib/flow';
-import {WhiteLabel} from '../styles';
+import {applyViewStyles, WhiteLabel} from '../styles';
 
 import icon from '../images/icons/layers.svg';
 import * as layers from '../three/layers';
@@ -23,6 +23,7 @@ import {
 import {invert} from '@motion-canvas/2d/lib/partials';
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   yield layers.setup();
   yield view.add(
     <>
@@ -35,7 +36,7 @@ export default makeScene2D(function* (view) {
         scene={layers.threeScene}
       />
       <Layout offsetX={-1} offsetY={-1} x={-940} y={-520} layout>
-        <Image
+        <Img
           filters={[invert(1)]}
           opacity={0.54}
           width={40}
@@ -43,9 +44,9 @@ export default makeScene2D(function* (view) {
           margin={20}
           src={icon}
         />
-        <Text paddingRight={40} {...WhiteLabel} lineHeight={80} cache>
+        <Txt paddingRight={40} {...WhiteLabel} lineHeight={80} cache>
           Parallax Pass
-        </Text>
+        </Txt>
       </Layout>
     </>,
   );

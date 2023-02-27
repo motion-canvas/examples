@@ -23,15 +23,16 @@ import {
   Layout,
   LayoutProps,
   Rect,
-  Text,
+  Txt,
 } from '@motion-canvas/2d/lib/components';
-import {Colors, WhiteLabel} from '../styles';
+import {applyViewStyles, Colors, WhiteLabel} from '../styles';
 
 import normalTex from '../images/frames/normals.png';
 import normalRTex from '../images/frames/normals_r.png';
 import normalGTex from '../images/frames/normals_g.png';
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   const buffer = makeRefs<typeof GBuffer>();
   const three = createRef<Three>();
   const fragment = createRef<Circle>();
@@ -270,13 +271,13 @@ export default makeScene2D(function* (view) {
     label,
     ...props
   }: {
-    refs: {value: Layout; handle: Circle; range: Vector; text: Text};
+    refs: {value: Layout; handle: Circle; range: Vector; text: Txt};
     color: string;
     label: string;
   } & LayoutProps) {
     return (
       <Layout ref={makeRef(refs, 'value')} {...props}>
-        <Text
+        <Txt
           ref={makeRef(refs, 'text')}
           {...WhiteLabel}
           fill={color}
@@ -285,7 +286,7 @@ export default makeScene2D(function* (view) {
           offsetY={-1}
         >
           {label}
-        </Text>
+        </Txt>
         <Vector
           lineWidth={4}
           startArrow
@@ -297,9 +298,9 @@ export default makeScene2D(function* (view) {
           {range(5).map(i => (
             <>
               <Rect x={(i - 2) * 140} width={4} height={16} fill={'#444'}>
-                <Text {...WhiteLabel} fill={'#444'} offsetY={-1} y={10}>
+                <Txt {...WhiteLabel} fill={'#444'} offsetY={-1} y={10}>
                   {(i - 2).toFixed()}
-                </Text>
+                </Txt>
               </Rect>
             </>
           ))}

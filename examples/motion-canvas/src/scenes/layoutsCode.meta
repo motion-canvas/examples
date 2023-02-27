@@ -1,6 +1,5 @@
 {
   "version": 1,
-  "seed": 2203922065,
   "timeEvents": [
     {
       "name": "select",
@@ -62,5 +61,6 @@
       "name": "next",
       "targetTime": 40.68088195464852
     }
-  ]
+  ],
+  "seed": 2203922065
 }

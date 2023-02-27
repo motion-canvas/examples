@@ -23,7 +23,7 @@ export class Sampler {
     this.context = canvas.getContext('2d', {willReadFrequently: true});
   }
 
-  async setUrl(value: string) {
+  public async setUrl(value: string) {
     this.image = await Sampler.getImageFor(value);
     this.context.canvas.width = this.image.naturalWidth;
     this.context.canvas.height = this.image.naturalHeight;

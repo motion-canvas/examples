@@ -1,6 +1,6 @@
 import {makeScene2D} from '@motion-canvas/2d';
 import {waitUntil} from '@motion-canvas/core/lib/flow';
-import {Layout, Rect, Text} from '@motion-canvas/2d/lib/components';
+import {Layout, Rect, Txt} from '@motion-canvas/2d/lib/components';
 import {createRef, makeRef, useScene} from '@motion-canvas/core/lib/utils';
 import {map} from '@motion-canvas/core/lib/tweening';
 import {createSignal} from '@motion-canvas/core/lib/signals';
@@ -8,7 +8,7 @@ import {Direction, Spacing} from '@motion-canvas/core/lib/types';
 import {slideTransition} from '@motion-canvas/core/lib/transitions';
 
 export default makeScene2D(function* (view) {
-  const label = createRef<Text>();
+  const label = createRef<Txt>();
   const size = createSignal(1);
   const rects: Rect[] = [];
   const animate = (from: number, to: number) => () => map(from, to, size());
@@ -38,7 +38,7 @@ export default makeScene2D(function* (view) {
           <Rect ref={makeRef(rects, 7)} grow={animate(3, 2)} />
         </Layout>
       </Layout>
-      <Text
+      <Txt
         ref={label}
         fontSize={120}
         lineHeight={120}

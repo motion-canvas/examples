@@ -3,26 +3,27 @@ import {all, delay, waitUntil} from '@motion-canvas/core/lib/flow';
 import {GBuffer, Vector} from '../components';
 import {slideTransition} from '@motion-canvas/core/lib/transitions';
 import {Direction} from '@motion-canvas/core/lib/types';
-import {Image, Layout, Rect, Text} from '@motion-canvas/2d/lib/components';
+import {Img, Layout, Rect, Txt} from '@motion-canvas/2d/lib/components';
 import color from '../images/frames/colors.png';
 import wireframe from '../images/frames/wireframe.png';
 import ball from '../images/frames/ball.png';
 import ballPalette from '../images/frames/ball_palette.png';
 import ballLookup from '../images/frames/ball_lookup.png';
 import table from '../images/frames/table.png';
-import {WhiteLabel} from '../styles';
+import {applyViewStyles, WhiteLabel} from '../styles';
 import {createRef, makeRefs} from '@motion-canvas/core/lib/utils';
 
 import pointLight from '../images/icons/point_light.svg';
 import {brightness, invert} from '@motion-canvas/2d/lib/partials';
 
 export default makeScene2D(function* (view) {
+  applyViewStyles(view);
   const scene = createRef<Rect>();
   const buffer = makeRefs<typeof GBuffer>();
-  const ballTex = createRef<Image>();
-  const ballAlpha = createRef<Image>();
+  const ballTex = createRef<Img>();
+  const ballAlpha = createRef<Img>();
   const ballArrow = createRef<Vector>();
-  const tableTex = createRef<Image>();
+  const tableTex = createRef<Img>();
   const tableArrow = createRef<Vector>();
   const textures = createRef<Layout>();
   const lights = createRef<Layout>();
@@ -37,8 +38,8 @@ export default makeScene2D(function* (view) {
         fill={'#242424'}
         clip
       >
-        <Image width={960} height={540} src={color} smoothing={false} />
-        <Image
+        <Img width={960} height={540} src={color} smoothing={false} />
+        <Img
           filters={[invert(1)]}
           width={960}
           height={540}
@@ -46,16 +47,16 @@ export default makeScene2D(function* (view) {
           smoothing={false}
         />
         <Layout ref={lights} opacity={0}>
-          <Image width={96} src={pointLight} x={-320} />
-          <Image width={96} src={pointLight} x={320} y={-120} />
+          <Img width={96} src={pointLight} x={-320} />
+          <Img width={96} src={pointLight} x={320} y={-120} />
         </Layout>
-        <Text offsetX={-1} offsetY={-1} x={-450} y={-250} {...WhiteLabel}>
+        <Txt offsetX={-1} offsetY={-1} x={-450} y={-250} {...WhiteLabel}>
           SCENE
-        </Text>
+        </Txt>
       </Rect>
       <GBuffer refs={buffer} x={540} opacity={0} width={520} hidden />
       <Layout ref={textures}>
-        <Image
+        <Img
           ref={ballTex}
           src={ball}
           opacity={0}
@@ -76,7 +77,7 @@ export default makeScene2D(function* (view) {
           stroke={'white'}
           end={0}
         />
-        <Image
+        <Img
           ref={tableTex}
           src={table}
           opacity={0}
@@ -134,7 +135,7 @@ export default makeScene2D(function* (view) {
   );
   yield* waitUntil('alpha');
   yield textures().add(
-    <Image
+    <Img
       src={ball}
       ref={ballAlpha}
       opacity={0}
@@ -150,13 +151,13 @@ export default makeScene2D(function* (view) {
   yield* waitUntil('discard');
   yield* all(ballTex().fill('#285eb000', 0.5), ballAlpha().opacity(0, 0.5));
 
-  const pallete = createRef<Image>();
-  const lookup = createRef<Image>();
+  const pallete = createRef<Img>();
+  const lookup = createRef<Img>();
   const lookupArrow = createRef<Vector>();
   yield* waitUntil('palette');
   yield textures().add(
     <>
-      <Image
+      <Img
         src={ballPalette}
         ref={pallete}
         opacity={0}
@@ -167,7 +168,7 @@ export default makeScene2D(function* (view) {
         clip
         radius={9}
       />
-      <Image
+      <Img
         src={ballLookup}
         ref={lookup}
         opacity={0}
@@ -184,7 +185,7 @@ export default makeScene2D(function* (view) {
           arrowSize={24}
           stroke={'white'}
         />
-      </Image>
+      </Img>
     </>,
   );
   yield* all(

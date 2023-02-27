@@ -1,7 +1,7 @@
 import {computed, vector2Signal} from '@motion-canvas/2d/lib/decorators';
 import {
   PossibleVector2,
-  Rect,
+  BBox,
   Vector2,
   Vector2Signal,
 } from '@motion-canvas/core/lib/types';
@@ -102,9 +102,9 @@ export class Vector extends VectorBase {
     super.draw(context);
   }
 
-  protected getCacheRect(): Rect {
+  protected getCacheRect(): BBox {
     const length = this.length();
     const arrowSize = (this.arrowSize() * 2) / 1.415;
-    return new Rect(length / -2, arrowSize / -2, length, arrowSize);
+    return new BBox(length / -2, arrowSize / -2, length, arrowSize);
   }
 }

@@ -53,7 +53,7 @@ async function setup() {
   texture.minFilter = THREE.NearestFilter;
   parallax.reset();
 
-  for (let i = 0; i < layers.length; i++){
+  for (let i = 0; i < layers.length; i++) {
     const layer = layers[i];
     layer.material.uniforms.map.value = texture;
     layer.position.set((i - 2) * 260, 0, 0);

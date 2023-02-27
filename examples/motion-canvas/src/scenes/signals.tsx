@@ -1,6 +1,6 @@
 import {makeScene2D} from '@motion-canvas/2d';
 import {all, chain, delay, loop, waitUntil} from '@motion-canvas/core/lib/flow';
-import {Circle, Node, Line, Rect, Text} from '@motion-canvas/2d/lib/components';
+import {Circle, Node, Line, Rect, Txt} from '@motion-canvas/2d/lib/components';
 import {
   createRef,
   makeRef,
@@ -33,7 +33,7 @@ const positions = [
 ];
 
 export default makeScene2D(function* (view) {
-  const label = createRef<Text>();
+  const label = createRef<Txt>();
   const signals: Circle[] = [];
   const random = useRandom(4);
   const lineGroup = createRef<Node>();
@@ -58,7 +58,7 @@ export default makeScene2D(function* (view) {
       </Node>
       <Node ref={mainLinnGroup} />
       <Rect layout fill={'#141414'} padding={[30, 40, 20]} radius={8}>
-        <Text
+        <Txt
           ref={label}
           fontSize={120}
           lineHeight={120}

@@ -16,9 +16,11 @@ import {
   word,
 } from '@motion-canvas/2d/lib/components/CodeBlock';
 import {createRef, useScene} from '@motion-canvas/core/lib/utils';
-import {Circle, Line, Rect, Text, Node} from '@motion-canvas/2d/lib/components';
+import {Circle, Line, Rect, Txt, Node} from '@motion-canvas/2d/lib/components';
 import {createSignal} from '@motion-canvas/core/lib/signals';
 import {cancel} from '@motion-canvas/core/lib/threading';
+
+console.log('bruh');
 
 export default makeScene2D(function* (view) {
   const code = createRef<CodeBlock>();
@@ -37,8 +39,8 @@ export default makeScene2D(function* (view) {
   };
 
   const preview = createRef<Node>();
-  const areaLabel = createRef<Text>();
-  const radiusLabel = createRef<Text>();
+  const areaLabel = createRef<Txt>();
+  const radiusLabel = createRef<Txt>();
   const circle = createRef<Circle>();
   const radiusLine = createRef<Line>();
 
@@ -63,13 +65,13 @@ export default makeScene2D(function* (view) {
         end={0}
         stroke={'#242424'}
       />
-      <Text
+      <Txt
         ref={radiusLabel}
         fill={'#242424'}
         x={() => (radius() * scale) / 2}
         {...textStyle}
       />
-      <Text ref={areaLabel} fill={'#e13238'} {...textStyle} />
+      <Txt ref={areaLabel} fill={'#e13238'} {...textStyle} />
     </Node>,
   );
 
@@ -112,7 +114,7 @@ ${insert(`  const radius = createSignal(3);`)}
 });`;
 
   yield* waitUntil('name_radius');
-  yield* code().selection(word(1, 7, 5), 0.3);
+  yield* code().selection(word(1, 8, 5), 0.3);
   yield* waitUntil('name_3');
   yield* code().selection(word(1, 30, 1), 0.3);
 
