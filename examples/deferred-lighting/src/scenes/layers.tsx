@@ -4,7 +4,7 @@ import {
   all,
   delay,
   noop,
-  sequence,
+  sequence, waitFor,
   waitUntil,
 } from '@motion-canvas/core/lib/flow';
 import {applyViewStyles, WhiteLabel} from '../styles';
@@ -21,6 +21,7 @@ import {
   tween,
 } from '@motion-canvas/core/lib/tweening';
 import {invert} from '@motion-canvas/2d/lib/partials';
+import {finishScene} from '@motion-canvas/core/lib/utils';
 
 export default makeScene2D(function* (view) {
   applyViewStyles(view);
@@ -180,4 +181,6 @@ export default makeScene2D(function* (view) {
   );
 
   yield* waitUntil('next');
+  finishScene();
+  yield* waitFor(1);
 });

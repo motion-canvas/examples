@@ -59,7 +59,7 @@ export function createLightMaterial() {
     volume.reset();
     color.reset();
 
-    useScene().LifecycleEvents.onBeginRender.subscribe(update);
+    useScene().lifecycleEvents.onBeginRender.subscribe(update);
   }
 
   return {

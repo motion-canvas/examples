@@ -53,6 +53,7 @@ const apply = createComputed(() => {
 });
 
 async function setup() {
+  useScene().lifecycleEvents.onBeginRender.subscribe(apply);
   orbit.reset();
 
   box.position.set(-220, 0, 0);
@@ -75,7 +76,6 @@ async function setup() {
   light.material.uniforms.normals.value = texture;
   light.material.uniforms.colors.value = textureColor;
 
-  useScene().LifecycleEvents.onBeginRender.subscribe(apply);
 }
 
 function render(renderer: WebGLRenderer, scene: Scene, camera: Camera) {

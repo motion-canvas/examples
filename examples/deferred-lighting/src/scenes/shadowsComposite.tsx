@@ -229,7 +229,7 @@ export default makeScene2D(function* (view) {
     .position.x(() => lightPos.x() * 10)
     .position.y(() => -lightPos.y() * 10);
 
-  useScene().LifecycleEvents.onBeginRender.subscribe(() => {
+  useScene().lifecycleEvents.onBeginRender.subscribe(() => {
     shadow.material.uniforms.lightWS.value.x = lightPos.x();
     shadow.material.uniforms.lightWS.value.y = lightPos.y();
     pointLight.mesh.position.setX(lightPos.x()).setY(lightPos.y());

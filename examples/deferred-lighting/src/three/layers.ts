@@ -48,6 +48,7 @@ const apply = createComputed(() => {
 });
 
 async function setup() {
+  useScene().lifecycleEvents.onBeginRender.subscribe(apply);
   const texture = await texturePromise;
   texture.magFilter = THREE.NearestFilter;
   texture.minFilter = THREE.NearestFilter;
@@ -63,8 +64,6 @@ async function setup() {
   orbit.rotation.set(0, 0, 0);
   camera.rotation.set(0, 0, 0);
   camera.position.set(0, 0, 540);
-
-  useScene().LifecycleEvents.onBeginRender.subscribe(apply);
 }
 
 export {threeScene, camera, layers, setup, orbit, parallax};

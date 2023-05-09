@@ -128,7 +128,7 @@ export default makeScene2D(function* (view) {
   const circleColor = Color.createSignal(Colors.KEYWORD);
   const circleX = createSignal(-72);
   const circleY = createSignal(-6);
-  useScene().LifecycleEvents.onBeginRender.subscribe(() => {
+  useScene().lifecycleEvents.onBeginRender.subscribe(() => {
     normalMaterialA.uniforms.transparency.value = normalOpacity();
     circleMaterialA.opacity = opacity();
     circleMaterialA.color = new THREE.Color(circleColor().serialize());

@@ -102,7 +102,7 @@ export class Vector extends VectorBase {
     super.draw(context);
   }
 
-  protected getCacheRect(): BBox {
+  protected override getCacheBBox(): BBox {
     const length = this.length();
     const arrowSize = (this.arrowSize() * 2) / 1.415;
     return new BBox(length / -2, arrowSize / -2, length, arrowSize);

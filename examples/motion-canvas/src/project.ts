@@ -10,7 +10,5 @@ import audio from './audio/voice.mp3';
 
 export default makeProject({
   scenes: [signals, signalsCode, layouts, layoutsCode, interfaceScene],
-  background: '#141414',
   audio,
-  audioOffset: -2264 / 60,
 });

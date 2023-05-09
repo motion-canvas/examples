@@ -69,6 +69,7 @@ const update = createComputed(() => {
 });
 
 async function setup() {
+  useScene().lifecycleEvents.onBeginRender.subscribe(update);
   light.setup();
   outputLight.setup();
   globalLight.setup();
@@ -115,8 +116,6 @@ async function setup() {
   shadowC.rotation.set(0, 0, Math.PI / 7);
 
   camera.position.set(0, 0, 10);
-
-  useScene().LifecycleEvents.onBeginRender.subscribe(update);
 }
 
 function render(renderer: WebGLRenderer, scene: Scene, camera: Camera) {

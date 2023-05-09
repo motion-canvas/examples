@@ -267,7 +267,7 @@ export default makeScene2D(function* (view) {
   yield* code().selection(word(20, 21, 5), 0.3);
 
   yield* waitUntil('height');
-  yield* code().selection(word(20, 27, 3), 0.3);
+  yield* code().selection(word(20, 28, 3), 0.3);
   yield* label().size(['50%', 320], 1);
 
   yield* waitUntil('second');

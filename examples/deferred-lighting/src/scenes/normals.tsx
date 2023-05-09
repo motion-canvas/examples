@@ -104,7 +104,7 @@ export default makeScene2D(function* (view) {
     material.color.setRGB(unit.x, unit.y, unit.z);
   }
 
-  useScene().LifecycleEvents.onBeginRender.subscribe(() => {
+  useScene().lifecycleEvents.onBeginRender.subscribe(() => {
     normals.orbit.rotation.set(orbitX(), 0, orbitY(), 'YZX');
     updateArrowColor(normals.arrow, normals.arrowMaterial);
     updateArrowColor(normals.arrowA, normals.arrowMaterialA);

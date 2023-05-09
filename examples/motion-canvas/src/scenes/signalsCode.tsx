@@ -114,7 +114,7 @@ ${insert(`  const radius = createSignal(3);`)}
 });`;
 
   yield* waitUntil('name_radius');
-  yield* code().selection(word(1, 8, 5), 0.3);
+  yield* code().selection(word(1, 8, 6), 0.3);
   yield* waitUntil('name_3');
   yield* code().selection(word(1, 30, 1), 0.3);
 

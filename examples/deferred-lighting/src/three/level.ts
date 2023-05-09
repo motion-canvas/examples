@@ -54,7 +54,7 @@ async function setup() {
   camera.rotation.set(0, 0, 0);
   camera.position.set(0, 0, 10);
 
-  useScene().LifecycleEvents.onBeginRender.subscribe(apply);
+  useScene().lifecycleEvents.onBeginRender.subscribe(apply);
 }
 
 export {threeScene, camera, setup, orbit};

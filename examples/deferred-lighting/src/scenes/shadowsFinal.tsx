@@ -243,7 +243,7 @@ export default makeScene2D(function* (view) {
   shadowB.position.set(-14, -6.5, 0);
   shadowB.material = shadow.material;
 
-  useScene().LifecycleEvents.onBeginRender.subscribe(() => {
+  useScene().lifecycleEvents.onBeginRender.subscribe(() => {
     shadow.material.uniforms.lightWS.value.x = lightX();
     shadow.material.uniforms.lightWS.value.y = lightY();
     stencilShadow.material.uniforms.lightWS.value.x = lightX();
