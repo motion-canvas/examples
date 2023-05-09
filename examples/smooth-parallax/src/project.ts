@@ -9,7 +9,7 @@ import merge from './scenes/merge?scene';
 import rendering from './scenes/rendering?scene';
 import lights from './scenes/lights?scene';
 import outro from './scenes/outro?scene';
-import audio from './voice.wav';
+import audio from './voice.mp3';
 
 export default makeProject({
   scenes: [
