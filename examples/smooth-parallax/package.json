@@ -1,0 +1,13 @@
+{
+  "name": "@examples/smooth-parallax",
+  "private": true,
+  "description": "Source code for the Smooth Parallax video",
+  "license": "MIT",
+  "scripts": {
+    "serve": "vite"
+  },
+  "dependencies": {
+    "@types/three": "^0.149.0",
+    "three": "^0.149.0"
+  }
+}

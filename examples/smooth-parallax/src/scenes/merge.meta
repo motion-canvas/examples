@@ -1,0 +1,46 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "reconcile",
+      "targetTime": 3.1338505004613117
+    },
+    {
+      "name": "explode",
+      "targetTime": 4.299571526690427
+    },
+    {
+      "name": "parallax_select",
+      "targetTime": 5.874703127575996
+    },
+    {
+      "name": "result_select",
+      "targetTime": 8.602365635837899
+    },
+    {
+      "name": "selection_reset",
+      "targetTime": 15.517535337558932
+    },
+    {
+      "name": "swap_order",
+      "targetTime": 19.449394691046425
+    },
+    {
+      "name": "upscale_select",
+      "targetTime": 21.28376034500937
+    },
+    {
+      "name": "result_select_again",
+      "targetTime": 24.929539497602565
+    },
+    {
+      "name": "selection_reset_again",
+      "targetTime": 28.82398201669298
+    },
+    {
+      "name": "next",
+      "targetTime": 31.044172695260183
+    }
+  ],
+  "seed": 3466283316
+}

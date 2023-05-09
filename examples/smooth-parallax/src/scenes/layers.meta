@@ -1,0 +1,162 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "camera_show",
+      "targetTime": 1.351005796660171
+    },
+    {
+      "name": "separate",
+      "targetTime": 2.8254232584060075
+    },
+    {
+      "name": "merge",
+      "targetTime": 6.2294909313069375
+    },
+    {
+      "name": "plot",
+      "targetTime": 7.340539643060527
+    },
+    {
+      "name": "centers_show",
+      "targetTime": 12.066508292601863
+    },
+    {
+      "name": "camera_move",
+      "targetTime": 14.285480203904378
+    },
+    {
+      "name": "camera_perspective",
+      "targetTime": 19.259959662723027
+    },
+    {
+      "name": "camera_ray",
+      "targetTime": 23.97194669346377
+    },
+    {
+      "name": "camera_ray_hide",
+      "targetTime": 26.954157581263484
+    },
+    {
+      "name": "background",
+      "targetTime": 28.72333367213717
+    },
+    {
+      "name": "foreground",
+      "targetTime": 30.201360737441792
+    },
+    {
+      "name": "hide_offset",
+      "targetTime": 32.39854679312039
+    },
+    {
+      "name": "central_select",
+      "targetTime": 33.451026744125876
+    },
+    {
+      "name": "offset",
+      "targetTime": 35.382610593084465
+    },
+    {
+      "name": "offset_hide",
+      "targetTime": 37.11344354623664
+    },
+    {
+      "name": "camera_ortho",
+      "targetTime": 41.11344354623664
+    },
+    {
+      "name": "reset_layers",
+      "targetTime": 47.02003604861713
+    },
+    {
+      "name": "calculation",
+      "targetTime": 51.25369178690827
+    },
+    {
+      "name": "triangle",
+      "targetTime": 54.417421620731574
+    },
+    {
+      "name": "triangle_central",
+      "targetTime": 55.895961202424
+    },
+    {
+      "name": "txt_offset",
+      "targetTime": 57.481899293007125
+    },
+    {
+      "name": "txt_camera",
+      "targetTime": 58.66948621856342
+    },
+    {
+      "name": "txt_eq",
+      "targetTime": 59.97186493824705
+    },
+    {
+      "name": "txt_l1",
+      "targetTime": 60.69369576569451
+    },
+    {
+      "name": "txt_l2",
+      "targetTime": 62.401416045594154
+    },
+    {
+      "name": "solve",
+      "targetTime": 64.68476799130524
+    },
+    {
+      "name": "txt_ratio",
+      "targetTime": 70.16999692674447
+    },
+    {
+      "name": "math_hide",
+      "targetTime": 72.39123152334372
+    },
+    {
+      "name": "preview_layer",
+      "targetTime": 73.75738670320897
+    },
+    {
+      "name": "preview_ratio",
+      "targetTime": 77.04590653168873
+    },
+    {
+      "name": "preview_foreground",
+      "targetTime": 79.51126215985171
+    },
+    {
+      "name": "preview_background",
+      "targetTime": 82.32091325660835
+    },
+    {
+      "name": "preview_infinity",
+      "targetTime": 85.80050396609602
+    },
+    {
+      "name": "practice_ortho",
+      "targetTime": 90.0974224463603
+    },
+    {
+      "name": "practice_move",
+      "targetTime": 92.95408643500319
+    },
+    {
+      "name": "negative_values",
+      "targetTime": 100.02074666158495
+    },
+    {
+      "name": "negative_move",
+      "targetTime": 102.54418919608594
+    },
+    {
+      "name": "zoom_in",
+      "targetTime": 105.12103130741045
+    },
+    {
+      "name": "next",
+      "targetTime": 114.15699260989628
+    }
+  ],
+  "seed": 1013386248
+}

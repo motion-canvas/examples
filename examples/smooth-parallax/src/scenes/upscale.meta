@@ -1,0 +1,82 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "native_show",
+      "targetTime": 2.0155109675615597
+    },
+    {
+      "name": "native_zoom",
+      "targetTime": 4.821778702662262
+    },
+    {
+      "name": "native_grid",
+      "targetTime": 6.218088584292697
+    },
+    {
+      "name": "native_zoom_out",
+      "targetTime": 9.165284232427119
+    },
+    {
+      "name": "native_upscale",
+      "targetTime": 10.362717792454735
+    },
+    {
+      "name": "screen_zoom",
+      "targetTime": 13.107081065851675
+    },
+    {
+      "name": "screen_integer",
+      "targetTime": 14.975180324173254
+    },
+    {
+      "name": "screen_grid_show",
+      "targetTime": 16.429862174181746
+    },
+    {
+      "name": "screen_grid_square",
+      "targetTime": 18.617051044202608
+    },
+    {
+      "name": "screen_grid_square_hide",
+      "targetTime": 20.77204522562564
+    },
+    {
+      "name": "screen_grid_scale",
+      "targetTime": 21.463086230699282
+    },
+    {
+      "name": "screen_grid_rect",
+      "targetTime": 23.287870979207085
+    },
+    {
+      "name": "overlay_hide",
+      "targetTime": 25.760714163787096
+    },
+    {
+      "name": "screen_zoom_out",
+      "targetTime": 29.035289637675977
+    },
+    {
+      "name": "gameplay_red",
+      "targetTime": 31.917482356398995
+    },
+    {
+      "name": "cutscene_show",
+      "targetTime": 35.87009613534935
+    },
+    {
+      "name": "cutscene_res",
+      "targetTime": 37.700075035411444
+    },
+    {
+      "name": "screen_res",
+      "targetTime": 41.04944231399073
+    },
+    {
+      "name": "next",
+      "targetTime": 45.85790166336505
+    }
+  ],
+  "seed": 339139290
+}

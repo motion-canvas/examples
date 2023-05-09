@@ -1,0 +1,102 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "hide_video",
+      "targetTime": 7.034447750569225
+    },
+    {
+      "name": "show_camera",
+      "targetTime": 8.75999217890426
+    },
+    {
+      "name": "show_ray",
+      "targetTime": 10.417612736385866
+    },
+    {
+      "name": "expand_angle",
+      "targetTime": 12.91137284294382
+    },
+    {
+      "name": "show_preview",
+      "targetTime": 14.282220000486104
+    },
+    {
+      "name": "scan",
+      "targetTime": 16.219355665083015
+    },
+    {
+      "name": "area_grow",
+      "targetTime": 18.523928222864882
+    },
+    {
+      "name": "area_shrink",
+      "targetTime": 22.533297965830194
+    },
+    {
+      "name": "area_shrink_end",
+      "targetTime": 25.63024541198178
+    },
+    {
+      "name": "circle_show",
+      "targetTime": 27.416320353880664
+    },
+    {
+      "name": "circle_move",
+      "targetTime": 28.478481295252006
+    },
+    {
+      "name": "circle_move_back",
+      "targetTime": 31.097522296810258
+    },
+    {
+      "name": "ratio_show",
+      "targetTime": 33.49752229681026
+    },
+    {
+      "name": "ratio_preview",
+      "targetTime": 36.15351909858368
+    },
+    {
+      "name": "ratio_move",
+      "targetTime": 37.91259995692193
+    },
+    {
+      "name": "ratio_hide",
+      "targetTime": 45.93041226757508
+    },
+    {
+      "name": "movement",
+      "targetTime": 47.86475477821542
+    },
+    {
+      "name": "movement_move",
+      "targetTime": 50.374671065361724
+    },
+    {
+      "name": "movement_preview",
+      "targetTime": 53.65877864076076
+    },
+    {
+      "name": "vector_hide",
+      "targetTime": 55.19837492837855
+    },
+    {
+      "name": "camera_move",
+      "targetTime": 59.498374928378546
+    },
+    {
+      "name": "vector_show",
+      "targetTime": 62.625761909357095
+    },
+    {
+      "name": "vector_preview",
+      "targetTime": 65.28828349369144
+    },
+    {
+      "name": "next",
+      "targetTime": 69.34312430217221
+    }
+  ],
+  "seed": 1178527585
+}

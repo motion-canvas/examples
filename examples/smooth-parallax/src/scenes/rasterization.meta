@@ -1,0 +1,34 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "light_show",
+      "targetTime": 3.6580991564543113
+    },
+    {
+      "name": "light_anim",
+      "targetTime": 7.243948138177762
+    },
+    {
+      "name": "grid_show",
+      "targetTime": 9.347672622825204
+    },
+    {
+      "name": "sprite_move",
+      "targetTime": 10.224931785178015
+    },
+    {
+      "name": "sprite_scale",
+      "targetTime": 16.273767886414568
+    },
+    {
+      "name": "sprite_rotate",
+      "targetTime": 16.781892122701606
+    },
+    {
+      "name": "next",
+      "targetTime": 20.078330343008385
+    }
+  ],
+  "seed": 1697391763
+}

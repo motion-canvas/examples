@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "show_renderer",
+      "targetTime": 1.4828971064568657
+    },
+    {
+      "name": "show_previous",
+      "targetTime": 3.7219916385464233
+    },
+    {
+      "name": "hide_previous",
+      "targetTime": 7.940940923768571
+    },
+    {
+      "name": "ingredients",
+      "targetTime": 13.329339496138186
+    },
+    {
+      "name": "parallax",
+      "targetTime": 16.384067035317248
+    },
+    {
+      "name": "upscaling",
+      "targetTime": 17.599673679581436
+    },
+    {
+      "name": "next",
+      "targetTime": 19.052852751282632
+    }
+  ],
+  "seed": 3073416149
+}

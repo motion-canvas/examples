@@ -4,6 +4,7 @@
   "description": "A set of examples for Motion Canvas",
   "license": "MIT",
   "scripts": {
+    "smooth-parallax": "npm run serve -w examples/smooth-parallax",
     "deferred-lighting": "npm run serve -w examples/deferred-lighting",
     "motion-canvas": "npm run serve -w examples/motion-canvas",
     "logo": "npm run serve -w examples/logo",
@@ -16,7 +17,7 @@
     "examples/*"
   ],
   "dependencies": {
-    "@motion-canvas/2d": "^3.6.1",
+    "@motion-canvas/2d": "^3.6.2",
     "@motion-canvas/core": "^3.6.1"
   },
   "devDependencies": {

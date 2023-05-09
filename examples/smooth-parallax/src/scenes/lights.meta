@@ -1,0 +1,114 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "background_select",
+      "targetTime": 1.7302838882033376
+    },
+    {
+      "name": "camera_move",
+      "targetTime": 3.2181819860053844
+    },
+    {
+      "name": "viewport_adjust",
+      "targetTime": 4.073519472182604
+    },
+    {
+      "name": "layer_render",
+      "targetTime": 5.034138820878271
+    },
+    {
+      "name": "render_loop",
+      "targetTime": 6.589918971827923
+    },
+    {
+      "name": "final_step",
+      "targetTime": 9.711330702932766
+    },
+    {
+      "name": "mesh_show",
+      "targetTime": 13.620160123761277
+    },
+    {
+      "name": "spread",
+      "targetTime": 15.940446870118622
+    },
+    {
+      "name": "uv_show",
+      "targetTime": 19.46923961630364
+    },
+    {
+      "name": "uv_length",
+      "targetTime": 23.029847472236032
+    },
+    {
+      "name": "merge",
+      "targetTime": 24.395035171034834
+    },
+    {
+      "name": "merge_render",
+      "targetTime": 27.454418617111592
+    },
+    {
+      "name": "parallax_enable",
+      "targetTime": 29.772180754393126
+    },
+    {
+      "name": "offsets_show",
+      "targetTime": 33.87913740788301
+    },
+    {
+      "name": "example",
+      "targetTime": 36.868150048521635
+    },
+    {
+      "name": "layer_select",
+      "targetTime": 37.83272344616445
+    },
+    {
+      "name": "scene_camera_offset",
+      "targetTime": 39.78062252508119
+    },
+    {
+      "name": "result_camera_offset",
+      "targetTime": 43.07015962165127
+    },
+    {
+      "name": "parallax_resume",
+      "targetTime": 44.79152072426559
+    },
+    {
+      "name": "parallax_pause_again",
+      "targetTime": 48.7221204560349
+    },
+    {
+      "name": "camera_expand",
+      "targetTime": 53.760533317194714
+    },
+    {
+      "name": "layers_expand",
+      "targetTime": 57.59072318835651
+    },
+    {
+      "name": "expand_resume",
+      "targetTime": 58.90893812008731
+    },
+    {
+      "name": "show_layers",
+      "targetTime": 61.00992838335804
+    },
+    {
+      "name": "screen_show",
+      "targetTime": 62.85656214580804
+    },
+    {
+      "name": "expand_textures",
+      "targetTime": 67.04327163950691
+    },
+    {
+      "name": "next",
+      "targetTime": 75.21663248095948
+    }
+  ],
+  "seed": 1853487158
+}

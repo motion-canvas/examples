@@ -1,0 +1,102 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "layers_show",
+      "targetTime": 5.827682626577729
+    },
+    {
+      "name": "texture_zoom",
+      "targetTime": 8.941920978915086
+    },
+    {
+      "name": "texture_pack",
+      "targetTime": 11.755455109217982
+    },
+    {
+      "name": "astortion",
+      "targetTime": 15.127324721871409
+    },
+    {
+      "name": "astortion_16",
+      "targetTime": 16.17342784277443
+    },
+    {
+      "name": "astortion_close",
+      "targetTime": 19.100803719019552
+    },
+    {
+      "name": "opacity_show",
+      "targetTime": 22.419466608576926
+    },
+    {
+      "name": "texture_zoom_out",
+      "targetTime": 27.455636546818482
+    },
+    {
+      "name": "highlight_last",
+      "targetTime": 29.121864402195676
+    },
+    {
+      "name": "last_offset",
+      "targetTime": 31.87215236417758
+    },
+    {
+      "name": "last_grid",
+      "targetTime": 35.15292190298991
+    },
+    {
+      "name": "last_align",
+      "targetTime": 36.576371783634364
+    },
+    {
+      "name": "snapping_show",
+      "targetTime": 39.503185497095224
+    },
+    {
+      "name": "snapping_hide",
+      "targetTime": 45.729795703216446
+    },
+    {
+      "name": "zoom_in",
+      "targetTime": 47.10133790603806
+    },
+    {
+      "name": "zoom_out",
+      "targetTime": 50.318173922540375
+    },
+    {
+      "name": "viewport_show",
+      "targetTime": 52.59446232244293
+    },
+    {
+      "name": "viewport_move",
+      "targetTime": 54.126522849608314
+    },
+    {
+      "name": "render",
+      "targetTime": 56.19784324584814
+    },
+    {
+      "name": "render_loop",
+      "targetTime": 59.11381754158242
+    },
+    {
+      "name": "performance_show",
+      "targetTime": 68.40160129507537
+    },
+    {
+      "name": "size_show",
+      "targetTime": 70.54942557403793
+    },
+    {
+      "name": "performance_hide",
+      "targetTime": 75.08636232476289
+    },
+    {
+      "name": "next",
+      "targetTime": 77.22765175617491
+    }
+  ],
+  "seed": 4065310126
+}
