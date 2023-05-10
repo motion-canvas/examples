@@ -39,7 +39,7 @@ npm run motion-canvas
 ### Deferred Lights
 
 ```shell
-npm run deferred-lights
+npm run deferred-lighting
 ```
 
 <a href="https://youtu.be/R6vQ9VmMz2w">
