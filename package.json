@@ -4,6 +4,7 @@
   "description": "A set of examples for Motion Canvas",
   "license": "MIT",
   "scripts": {
+    "anniversary": "npm run serve -w examples/anniversary",
     "smooth-parallax": "npm run serve -w examples/smooth-parallax",
     "deferred-lighting": "npm run serve -w examples/deferred-lighting",
     "motion-canvas": "npm run serve -w examples/motion-canvas",

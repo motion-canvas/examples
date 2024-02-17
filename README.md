@@ -16,6 +16,16 @@ A set of videos made using [Motion Canvas](https://motioncanvas.io).
 
 ## Available examples
 
+### One Year of Motion Canvas
+
+```shell
+npm run anniversary
+```
+
+<a href="https://youtu.be/4kjEwvrDKlg">
+   <img alt="One Year of Motion Canvas" src="https://img.youtube.com/vi/4kjEwvrDKlg/maxresdefault.jpg" width=480 />
+</a>
+
 ### Smooth Parallax
 
 ```shell

@@ -1,0 +1,9 @@
+{
+  "name": "@examples/anniversary",
+  "private": true,
+  "description": "Source code for the Motion Canvas anniversary video",
+  "license": "MIT",
+  "scripts": {
+    "serve": "vite"
+  }
+}
