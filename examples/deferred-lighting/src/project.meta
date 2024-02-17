@@ -21,7 +21,7 @@
     "resolutionScale": 0.25,
     "colorSpace": "srgb",
     "exporter": {
-      "name": "image sequence",
+      "name": "@motion-canvas/core/image-sequence",
       "options": {
         "fileType": "image/png",
         "quality": 100,

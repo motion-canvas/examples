@@ -17,12 +17,12 @@
     "examples/*"
   ],
   "dependencies": {
-    "@motion-canvas/2d": "^3.6.2",
-    "@motion-canvas/core": "^3.6.1"
+    "@motion-canvas/2d": "^3.14.2",
+    "@motion-canvas/core": "^3.14.1"
   },
   "devDependencies": {
-    "@motion-canvas/ui": "^3.6.1",
-    "@motion-canvas/vite-plugin": "^3.4.0",
+    "@motion-canvas/ui": "^3.14.2",
+    "@motion-canvas/vite-plugin": "^3.14.1",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "eslint": "^8.18.0",
