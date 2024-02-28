@@ -1,0 +1,158 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "show",
+      "targetTime": 0.8538659535786634
+    },
+    {
+      "name": "from_top",
+      "targetTime": 7.5524923336599645
+    },
+    {
+      "name": "is_moving",
+      "targetTime": 12.620667517110336
+    },
+    {
+      "name": "rest",
+      "targetTime": 16.059920656569624
+    },
+    {
+      "name": "close",
+      "targetTime": 20.390148607154064
+    },
+    {
+      "name": "zoom_so",
+      "targetTime": 22.689079919332414
+    },
+    {
+      "name": "branches",
+      "targetTime": 24.73029349061385
+    },
+    {
+      "name": "param",
+      "targetTime": 26.37265160309766
+    },
+    {
+      "name": "code",
+      "targetTime": 29.061189867772033
+    },
+    {
+      "name": "resolve_method",
+      "targetTime": 30.56709310530759
+    },
+    {
+      "name": "retrieve_value",
+      "targetTime": 31.785945244688985
+    },
+    {
+      "name": "index_branches",
+      "targetTime": 35.33593746477468
+    },
+    {
+      "name": "recursive_call",
+      "targetTime": 40.227501960756214
+    },
+    {
+      "name": "logic_in_data",
+      "targetTime": 43.114174061078
+    },
+    {
+      "name": "resolve_method_again",
+      "targetTime": 46.67038005408359
+    },
+    {
+      "name": "same_logic",
+      "targetTime": 53.08970747230657
+    },
+    {
+      "name": "is_grounded_equals",
+      "targetTime": 54.64358504035486
+    },
+    {
+      "name": "air_node",
+      "targetTime": 56.64233428251608
+    },
+    {
+      "name": "ground_node",
+      "targetTime": 58.636934245996954
+    },
+    {
+      "name": "class_name",
+      "targetTime": 62.32503843443335
+    },
+    {
+      "name": "resolve_method_again_2",
+      "targetTime": 63.78540772838668
+    },
+    {
+      "name": "ground_so",
+      "targetTime": 68.56787153011614
+    },
+    {
+      "name": "ground_so_param",
+      "targetTime": 69.7213272703149
+    },
+    {
+      "name": "ground_so_branches",
+      "targetTime": 71.04309171375878
+    },
+    {
+      "name": "separate_classes",
+      "targetTime": 72.58596929304994
+    },
+    {
+      "name": "stateless",
+      "targetTime": 78.42432557202181
+    },
+    {
+      "name": "static",
+      "targetTime": 81.46293750963105
+    },
+    {
+      "name": "functions",
+      "targetTime": 86.73053788059481
+    },
+    {
+      "name": "parameters",
+      "targetTime": 104.83449847480409
+    },
+    {
+      "name": "collision",
+      "targetTime": 107.47194942409256
+    },
+    {
+      "name": "string",
+      "targetTime": 111.96245228628368
+    },
+    {
+      "name": "struct",
+      "targetTime": 120.63225185232272
+    },
+    {
+      "name": "each_field",
+      "targetTime": 124.23842420552774
+    },
+    {
+      "name": "hope",
+      "targetTime": 126.57714386998128
+    },
+    {
+      "name": "actual_data",
+      "targetTime": 139.61833778383567
+    },
+    {
+      "name": "sos",
+      "targetTime": 142.2726570377825
+    },
+    {
+      "name": "expressed",
+      "targetTime": 147.51653433357407
+    },
+    {
+      "name": "next",
+      "targetTime": 155.4472586382206
+    }
+  ],
+  "seed": 2571509323
+}

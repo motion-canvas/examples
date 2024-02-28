@@ -1,0 +1,38 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "scroll",
+      "targetTime": 4.703717198002469
+    },
+    {
+      "name": "window",
+      "targetTime": 5.2423242200002065
+    },
+    {
+      "name": "move",
+      "targetTime": 6.479999751413301
+    },
+    {
+      "name": "connect",
+      "targetTime": 7.879999751413301
+    },
+    {
+      "name": "take_away",
+      "targetTime": 9.661669656854428
+    },
+    {
+      "name": "interpreted",
+      "targetTime": 18.41929394102698
+    },
+    {
+      "name": "editing",
+      "targetTime": 23.678213935108264
+    },
+    {
+      "name": "next",
+      "targetTime": 29.06416307815088
+    }
+  ],
+  "seed": 3913043788
+}

@@ -1,0 +1,26 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "meshes",
+      "targetTime": 2.2032071151775536
+    },
+    {
+      "name": "textures",
+      "targetTime": 2.587737502359694
+    },
+    {
+      "name": "audio",
+      "targetTime": 3.1317073183734534
+    },
+    {
+      "name": "blur",
+      "targetTime": 7.978248215333114
+    },
+    {
+      "name": "next",
+      "targetTime": 10.561906931934432
+    }
+  ],
+  "seed": 416220348
+}

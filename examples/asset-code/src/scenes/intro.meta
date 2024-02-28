@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "code",
+      "targetTime": 2.411543904648698
+    },
+    {
+      "name": "data",
+      "targetTime": 2.921374590988686
+    },
+    {
+      "name": "zoom_code",
+      "targetTime": 4.321374590988686
+    },
+    {
+      "name": "zoom_data",
+      "targetTime": 8.062151394841486
+    },
+    {
+      "name": "zoom_out",
+      "targetTime": 12.138454937880653
+    },
+    {
+      "name": "binary",
+      "targetTime": 15.712978136542317
+    },
+    {
+      "name": "bits",
+      "targetTime": 16.204899357366447
+    },
+    {
+      "name": "triangle",
+      "targetTime": 18.580661152462735
+    },
+    {
+      "name": "circle",
+      "targetTime": 20.180661152462736
+    },
+    {
+      "name": "useful",
+      "targetTime": 23.28104754267131
+    },
+    {
+      "name": "hide",
+      "targetTime": 27.382833432303418
+    }
+  ],
+  "seed": 3073416149
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@examples/lezer-gdscript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "generate": "lezer-generator ./src/gdscript.grammar -o ./src/parser.js",
+    "build": "lezer-generator src/gdscript.grammar -o src/parser && rollup -c"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@lezer/generator": "^1.6.0",
+    "@lezer/python": "^1.1.11",
+    "rollup": "^2.52.2",
+    "@rollup/plugin-node-resolve": "^9.0.0"
+  }
+}

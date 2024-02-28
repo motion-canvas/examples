@@ -16,6 +16,16 @@ A set of videos made using [Motion Canvas](https://motioncanvas.io).
 
 ## Available examples
 
+### Could This Asset Be Code
+
+```shell
+npm run asset-code
+```
+
+<a href="https://youtu.be/s1ZQnS_tOg0">
+   <img alt="One Year of Motion Canvas" src="https://img.youtube.com/vi/s1ZQnS_tOg0/maxresdefault.jpg" width=480 />
+</a>
+
 ### One Year of Motion Canvas
 
 ```shell

@@ -1,0 +1,9 @@
+{
+  "name": "@examples/asset-code",
+  "private": true,
+  "description": "Source code for the Could This Asset Be Code video",
+  "license": "MIT",
+  "scripts": {
+    "serve": "vite"
+  }
+}

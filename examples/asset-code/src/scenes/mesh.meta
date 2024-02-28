@@ -1,0 +1,50 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "zoom_mesh",
+      "targetTime": 4.8910563058950896
+    },
+    {
+      "name": "show_code",
+      "targetTime": 6.565833675990332
+    },
+    {
+      "name": "highlight_face",
+      "targetTime": 7.51733237382485
+    },
+    {
+      "name": "vertex_1",
+      "targetTime": 9.370706500359486
+    },
+    {
+      "name": "vertex_2",
+      "targetTime": 10.050214243148293
+    },
+    {
+      "name": "vertex_3",
+      "targetTime": 10.774901479126244
+    },
+    {
+      "name": "structure",
+      "targetTime": 12.145912116243952
+    },
+    {
+      "name": "reference",
+      "targetTime": 15.09614202505574
+    },
+    {
+      "name": "highlight",
+      "targetTime": 16.33246227765341
+    },
+    {
+      "name": "compile",
+      "targetTime": 17.811240650171797
+    },
+    {
+      "name": "next",
+      "targetTime": 24.951742283838087
+    }
+  ],
+  "seed": 2084934071
+}

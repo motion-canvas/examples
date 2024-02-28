@@ -1,0 +1,62 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "bevy_logo",
+      "targetTime": 0.61
+    },
+    {
+      "name": "editor",
+      "targetTime": 4.075406529315929
+    },
+    {
+      "name": "assets",
+      "targetTime": 6.84906420566776
+    },
+    {
+      "name": "player",
+      "targetTime": 8.508367005080725
+    },
+    {
+      "name": "scenes",
+      "targetTime": 10.875414530622374
+    },
+    {
+      "name": "prefabs",
+      "targetTime": 11.340493975703952
+    },
+    {
+      "name": "settings",
+      "targetTime": 11.712420161802953
+    },
+    {
+      "name": "custom",
+      "targetTime": 14.481085527138706
+    },
+    {
+      "name": "inspector",
+      "targetTime": 16.68960480852374
+    },
+    {
+      "name": "fields",
+      "targetTime": 31.24666610333896
+    },
+    {
+      "name": "bevy",
+      "targetTime": 44.15658388611446
+    },
+    {
+      "name": "external",
+      "targetTime": 46.26376928472355
+    },
+    {
+      "name": "question",
+      "targetTime": 52.30131567627151
+    },
+    {
+      "name": "next",
+      "targetTime": 61.050704586041256
+    }
+  ],
+  "seed": 1436440708
+}

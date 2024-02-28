@@ -1,0 +1,26 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "video",
+      "targetTime": 11.36887654986446
+    },
+    {
+      "name": "highlight_page",
+      "targetTime": 13.716976596700881
+    },
+    {
+      "name": "highlight_code",
+      "targetTime": 16.349938907042315
+    },
+    {
+      "name": "highlight_code_again",
+      "targetTime": 18.395299387265133
+    },
+    {
+      "name": "anyway",
+      "targetTime": 22.037540821959087
+    }
+  ],
+  "seed": 4137641580
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 224 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="playmaker" x="0" y="0" width="224" height="192" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect x="0" y="0" width="224" height="192"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <path d="M64.002,160C72.837,160 80,167.163 80,175.998L80,176.002C80,184.837 72.837,192 64.002,192L15.998,192C7.163,192 0,184.837 0,176.002L0,175.998C0,167.163 7.163,160 15.998,160L64.002,160ZM64.002,168L15.998,168C11.581,168 8,171.581 8,175.998L8,176.002C8,180.419 11.581,184 15.998,184L64.002,184C68.419,184 72,180.419 72,176.002L72,175.998C72,171.581 68.419,168 64.002,168Z" style="fill:white;"/>
+        <path d="M40,-0C53.255,0 64,10.745 64,24C64,37.255 53.255,48 40,48C26.745,48 16,37.255 16,24C16,10.745 26.745,0 40,-0ZM40,8C31.163,8 24,15.163 24,24C24,32.837 31.163,40 40,40C48.837,40 56,32.837 56,24C56,15.163 48.837,8 40,8Z" style="fill:white;"/>
+        <path d="M224,120L144,120L144,88L224,88L224,120ZM216,96L152,96L152,112L216,112L216,96Z" style="fill:white;"/>
+        <path d="M224,192L144,192L144,160L224,160L224,192ZM216,168L152,168L152,184L216,184L216,168Z" style="fill:white;"/>
+        <path d="M80,120L0,120L-0,88L80,88L80,120ZM72,96L8,96L8,112L72,112L72,96Z" style="fill:white;"/>
+        <rect x="36" y="56" width="8" height="24" style="fill:white;"/>
+        <rect x="36" y="128" width="8" height="24" style="fill:white;"/>
+        <rect x="180" y="128" width="8" height="24" style="fill:white;"/>
+        <path d="M88,108L88,100L136,100L136,108L88,108Z" style="fill:white;"/>
+        <path d="M88,180L88,172L136,172L136,180L88,180Z" style="fill:white;"/>
+    </g>
+</svg>

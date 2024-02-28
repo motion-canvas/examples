@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 136 136" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="music" x="0" y="0" width="136" height="136" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect x="0" y="0" width="136" height="136"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <path d="M0,124L0,68C0,30.445 30.445,0 68,0C105.555,0 136,30.445 136,68L136,124C136,127.183 134.736,130.235 132.485,132.485C130.235,134.736 127.183,136 124,136L96,136L96,80L128,80L128,68C128,34.863 101.137,8 68,8C34.863,8 8,34.863 8,68L8,80L40,80L40,136L12,136C8.817,136 5.765,134.736 3.515,132.485C1.264,130.235 -0,127.183 0,124ZM128,88L104,88L104,128L124,128C125.061,128 126.078,127.579 126.828,126.828C127.579,126.078 128,125.061 128,124L128,88ZM32,88L8,88L8,124C8,125.061 8.421,126.078 9.172,126.828C9.922,127.579 10.939,128 12,128L32,128L32,88Z" style="fill:white;"/>
+    </g>
+</svg>

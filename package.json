@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "anniversary": "npm run serve -w examples/anniversary",
+    "asset-code": "npm run serve -w examples/asset-code",
     "smooth-parallax": "npm run serve -w examples/smooth-parallax",
     "deferred-lighting": "npm run serve -w examples/deferred-lighting",
     "motion-canvas": "npm run serve -w examples/motion-canvas",
@@ -15,19 +16,27 @@
     "prettier:fix": "prettier --write \"examples/**/src/**/*.ts?(x)\""
   },
   "workspaces": [
-    "examples/*"
+    "examples/*",
+    "utils/*"
   ],
   "dependencies": {
-    "@motion-canvas/2d": "^3.14.2",
-    "@motion-canvas/core": "^3.14.1"
+    "@codemirror/language": "^6.10.1",
+    "@lezer/java": "^1.1.1",
+    "@lezer/javascript": "^1.4.13",
+    "@lezer/python": "^1.1.11",
+    "@lezer/rust": "^1.0.2",
+    "@lezer/yaml": "^1.0.2",
+    "@motion-canvas/2d": "3.15.0",
+    "@motion-canvas/core": "3.15.0"
   },
   "devDependencies": {
-    "@motion-canvas/ui": "^3.14.2",
-    "@motion-canvas/vite-plugin": "^3.14.1",
+    "@motion-canvas/vite-plugin": "3.14.1",
+    "@motion-canvas/ui": "3.15.0",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "eslint": "^8.18.0",
     "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.2.4",
     "vite": "^4.3.5"
   }
 }
