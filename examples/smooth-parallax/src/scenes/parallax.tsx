@@ -1,16 +1,18 @@
 import {makeScene2D} from '@motion-canvas/2d';
 import {
+  Circle,
+  CircleProps,
+  Img,
+  Layout,
+  Line,
+  LineProps,
   Node,
   Rect,
-  Layout,
-  Circle,
-  Img,
-  Line,
   Txt,
-  LineProps,
-  CircleProps,
 } from '@motion-canvas/2d/lib/components';
 import {all, delay, loop, waitUntil} from '@motion-canvas/core/lib/flow';
+import {zoomInTransition} from '@motion-canvas/core/lib/transitions';
+import {BBox} from '@motion-canvas/core/lib/types';
 import {
   createRef,
   finishScene,
@@ -19,11 +21,9 @@ import {
   useDuration,
   usePlayback,
 } from '@motion-canvas/core/lib/utils';
-import {zoomInTransition} from '@motion-canvas/core/lib/transitions';
-import {BBox} from '@motion-canvas/core/lib/types';
 
-import train from '../videos/train.png';
-import cameraIcon from '../images/icons/camera2.svg';
+import {createSignal} from '@motion-canvas/core/lib/signals';
+import {join} from '@motion-canvas/core/lib/threading';
 import {
   clamp,
   easeInCubic,
@@ -32,9 +32,9 @@ import {
   map,
   remap,
 } from '@motion-canvas/core/lib/tweening';
-import {createSignal} from '@motion-canvas/core/lib/signals';
+import cameraIcon from '../images/icons/camera2.svg';
 import {BlackLabel, Colors, WhiteLabel} from '../styles';
-import {join} from '@motion-canvas/core/lib/threading';
+import train from '../videos/train.png';
 
 export default makeScene2D(function* (view) {
   view.fill('#141414');
@@ -53,7 +53,7 @@ export default makeScene2D(function* (view) {
     </Rect>,
   );
   video().absolutePosition(view.absolutePosition);
-  yield* zoomInTransition(new BBox(-620, 30, 480, 270), 0.6);
+  yield* zoomInTransition(new BBox(100, 435, 480, 270), 0.6);
   yield* waitUntil('hide_video');
   yield* videoClip().position.x(-view.width(), 0.8, linear);
   videoClip().remove();

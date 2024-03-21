@@ -1,5 +1,11 @@
 import {makeScene2D} from '@motion-canvas/2d';
-import {Node, Rect, Circle, Txt, Img} from '@motion-canvas/2d/lib/components';
+import {Circle, Img, Node, Rect, Txt} from '@motion-canvas/2d/lib/components';
+import {
+  brightness,
+  contrast,
+  hue,
+  saturate,
+} from '@motion-canvas/2d/lib/partials';
 import {
   all,
   delay,
@@ -7,17 +13,8 @@ import {
   waitFor,
   waitUntil,
 } from '@motion-canvas/core/lib/flow';
-import {createRef, finishScene} from '@motion-canvas/core/lib/utils';
+import {createSignal} from '@motion-canvas/core/lib/signals';
 import {zoomOutTransition} from '@motion-canvas/core/lib/transitions';
-import {BBox, PossibleVector2, Vector2} from '@motion-canvas/core/lib/types';
-import {
-  BGColor,
-  createParallax,
-  createUpscale,
-  Parallax,
-  ParallaxProps,
-  Upscale,
-} from '../components';
 import {
   easeInExpo,
   easeInOutCubic,
@@ -28,14 +25,17 @@ import {
   TimingFunction,
   tween,
 } from '@motion-canvas/core/lib/tweening';
-import {createSignal} from '@motion-canvas/core/lib/signals';
-import {WhiteLabel} from '../styles';
+import {BBox, PossibleVector2, Vector2} from '@motion-canvas/core/lib/types';
+import {createRef, finishScene} from '@motion-canvas/core/lib/utils';
 import {
-  brightness,
-  contrast,
-  hue,
-  saturate,
-} from '@motion-canvas/2d/lib/partials';
+  BGColor,
+  createParallax,
+  createUpscale,
+  Parallax,
+  ParallaxProps,
+  Upscale,
+} from '../components';
+import {WhiteLabel} from '../styles';
 
 export default makeScene2D(function* (view) {
   view.fill('#141414');
@@ -69,7 +69,7 @@ export default makeScene2D(function* (view) {
     </>,
   );
 
-  yield* zoomOutTransition(new BBox(320, 0, 480, 270));
+  yield* zoomOutTransition(new BBox(1040, 405, 480, 270));
 
   yield* waitUntil('reconcile');
   yield* all(

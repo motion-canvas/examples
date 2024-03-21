@@ -1,15 +1,15 @@
 import {makeScene2D} from '@motion-canvas/2d';
 import {Img, Rect, RectProps, Txt} from '@motion-canvas/2d/lib/components';
 import {all, waitUntil} from '@motion-canvas/core/lib/flow';
-import {Container} from '../components';
-import {BlackLabel, Colors} from '../styles';
-import {createRef, makeRef, makeRefs} from '@motion-canvas/core/lib/utils';
-import layers from '../images/icons/layers.svg';
-import flare from '../images/icons/flare.svg';
-import desktop from '../images/icons/desktop.svg';
-import functions from '../images/icons/functions.svg';
-import {BBox} from '@motion-canvas/core/lib/types';
 import {zoomOutTransition} from '@motion-canvas/core/lib/transitions';
+import {BBox, Vector2} from '@motion-canvas/core/lib/types';
+import {createRef, makeRef, makeRefs} from '@motion-canvas/core/lib/utils';
+import {Container} from '../components';
+import desktop from '../images/icons/desktop.svg';
+import flare from '../images/icons/flare.svg';
+import functions from '../images/icons/functions.svg';
+import layers from '../images/icons/layers.svg';
+import {BlackLabel, Colors} from '../styles';
 import videoMock from '../videos/outro.png';
 
 export default makeScene2D(function* (view) {
@@ -55,28 +55,25 @@ export default makeScene2D(function* (view) {
 
   yield view.add(
     <>
-       <Img width={'100%'} src={videoMock} />
-       <Rect ref={renderer} layout clip>
-         <Container label="PIXEL ART RENDERER">
-           <Pass name="Simulation Pass" src={functions} />
-           <Pass refs={pass} name="Parallax Pass" src={layers} />
-           <Pass name="Post Effects Pass" src={flare} />
-           <Pass name="HUD Pass" src={desktop} />
-         </Container>
-       </Rect>
+      <Img width={'100%'} src={videoMock} />
+      <Rect ref={renderer} layout clip>
+        <Container label="PIXEL ART RENDERER">
+          <Pass name="Simulation Pass" src={functions} />
+          <Pass refs={pass} name="Parallax Pass" src={layers} />
+          <Pass name="Post Effects Pass" src={flare} />
+          <Pass name="HUD Pass" src={desktop} />
+        </Container>
+      </Rect>
     </>,
   );
 
+  const bbox = BBox.fromSizeCentered(
+    new Vector2((pass.value.height() / 9) * 16, pass.value.height()),
+  );
+  bbox.position = bbox.position.add(pass.value.absolutePosition());
   yield* all(
     pass.label.opacity(0).opacity(1, 0.6),
-    zoomOutTransition(
-      new BBox(
-        pass.value.position.x(),
-        pass.value.position.y(),
-        (pass.value.height() / 9) * 16,
-        pass.value.height(),
-      ),
-    ),
+    zoomOutTransition(bbox, 0.6),
   );
 
   yield* waitUntil('hide');
